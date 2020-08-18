@@ -1,5 +1,5 @@
 /* myStyle.css */
- header {
+        header {
             position: relative;
             background-color: black;
             height:50vh;
@@ -22,6 +22,7 @@
             -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-60%);
             }
+            
             header .overlay {
                 position: absolute;
                 top: 0;
@@ -61,7 +62,7 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -5%);
+          transform: translate(-50%, 75%);
           color: white;
           z-index: 2;
         }

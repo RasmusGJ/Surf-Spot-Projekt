@@ -1,21 +1,13 @@
-var request = new XMLHttpRequest()
+var airPressure = document.querySelector('.airPressure');
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=56.263920&lon=9.501785', true)
+fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=56.263920&lon=9.501785')
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+    var airPressureValue = data['properties']['timeseries']['0']['data']['instant']['details']['air_pressure_at_sea_level'];
+    console.log(airPressureValue)
+    airPressure.innerHTML = airPressureValue;
+})
 
-request.onload = function () {
-  // Begin accessing JSON data here
+.catch(err => alert("error"))
 
-    var data = JSON.parse(this.response)
-
-    if (request.status >= 200 && request.status < 400) {
-        data.forEach((things) => {
-        console.log(things.air_pressure_at_sea_level)
-        })
-    } else {
-        console.log('error')
-    }
-}
-
-// Send request
-request.send()

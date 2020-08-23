@@ -49,8 +49,9 @@
         </div>
 
         
+    <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=initialize" 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap" 
     type="text/javascript">
     </script>
     <div class="maps" id="googleMap" style="width:100%;height:400px;"></div>
@@ -89,7 +90,7 @@
             },
         ];
 
-        function addMarkers(){
+        /*function addMarkers(){
             for(var i = 0; i < markersOnMap.length; i++){
                 const marker = new google.maps.Marker({
                     position: markersOnMap[i].position,
@@ -97,11 +98,18 @@
                     map: map
                 });
             };
-        }
+        }*/
 
     </script>
     
-    <h1 id="id5" class="airPressure">Loading...</h1>
+    <!--Vejr data hentes fra yr-api.js-->
+    <h1 id="airTemp" class="airTemp">Loading...</h1>
+    <h1 id="airPress" class="airPress">Loading...</h1>
+    <h1 id="windSpeed" class="windSpeed">Loading...</h1>
+    <h1 id="probPercipitation" class="probPercipitation">Loading...</h1>
+
+
+
     <script src="JS/yr-api.js"></script>
     
     <footer class="footer">

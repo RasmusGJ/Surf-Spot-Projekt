@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ras_j\\source\\repos\\Surf-Spotter-core\\Surf-Spotter-core\\Surf-Spotter-core.csproj",
+      "projectUniqueName": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\Surf-Spotter-core\\Surf-Spotter-core\\Surf-Spotter-core.csproj",
       "projectName": "Surf-Spotter-core",
-      "projectPath": "C:\\Users\\ras_j\\source\\repos\\Surf-Spotter-core\\Surf-Spotter-core\\Surf-Spotter-core.csproj",
+      "projectPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\Surf-Spotter-core\\Surf-Spotter-core\\Surf-Spotter-core.csproj",
       "packagesPath": "C:\\Users\\ras_j\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ras_j\\source\\repos\\Surf-Spotter-core\\Surf-Spotter-core\\obj\\",
+      "outputPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\Surf-Spotter-core\\Surf-Spotter-core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

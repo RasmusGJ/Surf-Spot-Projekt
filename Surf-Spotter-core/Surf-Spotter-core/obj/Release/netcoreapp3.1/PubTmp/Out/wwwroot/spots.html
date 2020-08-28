@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <title>Surf Spotter</title>
+        <link rel="stylesheet" type="text/css" href="CSS/navBarSheet.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/myStyleSheet.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/spotsGallery.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+        <meta name="viewport" content="width-device, initial scale=1.0">  
+
+    </head> 
+
+        <header> 
+            <div class="nav-bar">
+                <nav>
+                    <label src="">helloooooo</label>
+                    <ul>
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="spots.html">Spots</a></li>
+                        <li><a href="Aboutus.html">Om Os</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>        
+                </nav>
+            </div>       
+            <div class="overlay"></div>
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="Assets/Images/My Video 1.mp4" type="video/mp4">
+                </video>      
+            </div>
+            <div class="hero-text">
+                <h1>Surf Spotter</h1>
+            </div>
+            <div class="sub-hero-text">
+                <p>Undersøg. Planlæg. Surf.</p>
+            </div>                    
+        </header>
+    <body>
+        
+        <div class="gallery-section">
+            <div class="inner-width">
+                <h1>Kendte spots</h1>
+                <div class="border"></div>
+                <div class="gallery">
+
+                    <a href="Assets/Images/surf-icon-16.png" class="image">
+                        <img src="Assets/Images/surf-icon-16.png" alt="error">
+                    </a>
+
+                    <a href="Assets/Images/wave-1.jpg" class="image">
+                        <img src="Assets/Images/wave-1.jpg" alt="error">
+                    </a>
+
+                    <a href="Assets/Images/wave2.jpg" class="image">
+                        <img src="Assets/Images/wave2.jpg" alt="error">
+                    </a>
+
+                    <a href="Assets/Images/wave3.jpg" class="image">
+                        <img src="Assets/Images/wave3.jpg" alt="error">
+                    </a>
+
+                    <a href="Assets/Images/wave4.jpg" class="image">
+                        <img src="Assets/Images/wave4.jpg" alt="error">
+                    </a>
+
+                    <a href="Assets/Images/surf-icon-16.png" class="image">
+                        <img src="Assets/Images/surf-icon-16.png" alt="error">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(".gallery").magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery:{
+                    enabled:true
+                }
+            });
+        </script>
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">
+                    Copyright &copy; 2020, Team Y4 - All Rights Reserved
+                </p>
+                <div class="social-list">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+        
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

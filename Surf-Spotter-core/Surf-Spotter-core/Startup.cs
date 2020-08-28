@@ -28,6 +28,7 @@ namespace Surf_Spotter_core
                 app.UseDeveloperExceptionPage();
             }
 
+<<<<<<< HEAD
             app.Use(async (context, next) =>
             {
                 if (context.Request.Path.Value.Contains("invalid"))
@@ -37,6 +38,17 @@ namespace Surf_Spotter_core
 
             app.UseStaticFiles();
 
+=======
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello World!");
+                });
+            });
+>>>>>>> parent of 5675b83... It woooorks
         }
     }
 }

@@ -95,6 +95,14 @@
         lng: 10.3814147
         };
 
+        var locations = [
+      ['Bondi Beach', -33.890542, 151.274856, 4],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Cronulla Beach', -34.028249, 151.157507, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ];
+
         function myMap() {
             map = new google.maps.Map(document.getElementById("googleMap"), {
             center: centerCords,
@@ -103,35 +111,24 @@
             });
         }
 
-        var icons = {
-            spots: {
-                icon: 'Assets\Images\surf-icon-16.png'
-            },
-            gangs: {
-                icon: 'Assets\Images\wave-1.jpg'
-            }
-        };
+        var marker, i;
 
-        var markersOnMap = [
-            {
-                position: new google.maps.LatLng(55.3994176, 10.3847918),
-                type: 'spots'
-            },
-            {
-                position: new google.maps.LatLng(54.4081471, 10.3819808),
-                type: 'spots'
-            },
-        ];
+        for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
 
-        function addMarkers(){
-            for(var i = 0; i < markersOnMap.length; i++){
-                var marker = new google.maps.Marker({
-                    position: markersOnMap[i].position,
-                    icon: icons,
-                    map: map
-                });
-            };
-        }
+        // function addMarkers(){
+        //     for(var i = 0; i < markersOnMap.length; i++){
+        //         var marker = new google.maps.Marker({
+        //             position: markersOnMap[i].position,
+        //             icon: icons,
+        //             map: map
+        //         });
+        //     };
+        // }'
+
     </script>
 
      <script

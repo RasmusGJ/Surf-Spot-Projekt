@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8"> 
         <title>Surf Spotter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width-device, initial scale=1.0">  
         <link rel="stylesheet" type="text/css" href="CSS/navBarSheet.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/myStyleSheet.css"/>
@@ -15,15 +17,15 @@
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="spots.html">Spots</a></li>
-                    <li><a href="Aboutus.html">Om Os</a></li>
+                    <li><a href="Aboutus.html">Om os</a></li>
                     <li><a href="Kontakt.html">Kontakt</a></li>
                 </ul>        
             </nav>
         </div>       
-        <div class="overlay"></div>
+        <div class="overlay">
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="Assets/Images/My Video 1.mp4" type="video/mp4">
-            </video>      
+            </video>  
         </div>
         <div class="hero-text">
             <h1>Surf Spotter</h1>
@@ -46,68 +48,12 @@
                 in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
-
-        
-    <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap" 
-    type="text/javascript">
-    </script>
-    <div class="maps" id="googleMap" style="width:100%;height:400px;"></div>
-    <script>
-        var map;
-        var centerCords = {
-        lat: 55.3980029,
-        lng: 10.3814147
-        };
-
-        function myMap() {
-            map = new google.maps.Map(document.getElementById("googleMap"), {
-            center: centerCords,
-            zoom: 14.5,
-            mapTypeId: google.maps.MapTypeId.SATELLITE
-            });
-        }
-
-        var icons = {
-            spots: {
-                icon: 'Assets\Images\surf-icon-16.png'
-            },
-            gangs: {
-                icon: 'Assets\Images\wave-1.jpg'
-            }
-        };
-
-        var markersOnMap = [
-            {
-                position: new google.maps.LatLng(55.4081471, 10.3819808),
-                type: 'spots'
-            },
-            {
-                position: new google.maps.LatLng(54.4081471, 10.3819808),
-                type: 'spots'
-            },
-        ];
-
-        /*function addMarkers(){
-            for(var i = 0; i < markersOnMap.length; i++){
-                const marker = new google.maps.Marker({
-                    position: markersOnMap[i].position,
-                    icon: icons[markersOnMap[i].type].icon,
-                    map: map
-                });
-            };
-        }*/
-
-    </script>
     
     <!--Vejr data hentes fra yr-api.js-->
     <h1 id="airTemp" class="airTemp">Loading...</h1>
     <h1 id="airPress" class="airPress">Loading...</h1>
     <h1 id="windSpeed" class="windSpeed">Loading...</h1>
     <h1 id="probPercipitation" class="probPercipitation">Loading...</h1>
-
-
 
     <script src="JS/yr-api.js"></script>
     
@@ -124,6 +70,4 @@
             </div>
         </div>
     </footer>
-
-
 </html>

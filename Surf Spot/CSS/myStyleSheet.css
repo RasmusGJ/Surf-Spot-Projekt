@@ -71,6 +71,10 @@ header .overlay {
   border: none;
   margin-left: 49%;
   margin-top: 25%;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 4s;
 }
 .goToBody:hover {
   z-index: 3;  
@@ -78,10 +82,17 @@ header .overlay {
 
 .fa-arrow-down {
   color: rgb(255, 196, 0);
+ 
 }
 
 .fa-arrow-down:hover {
   color: rgb(214, 142, 9);
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:15px;}
+  99%  {left:0px; top:0px;}
 }
 
 .fa-check{

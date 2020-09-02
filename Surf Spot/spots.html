@@ -49,7 +49,62 @@
             </div>                    
         </header>
     <body>
-        
+          <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
+    <div class="maps" id="googleMap"></div>
+    <script>
+        var map;
+        var centerCords = {
+        lat: 55.3980029,
+        lng: 10.3814147
+        };
+        var markerLocations = [{
+        lat: 55.3980029,
+        lng: 10.3814147,
+        title: 'Odense',
+        },
+        {
+        lat: 54.2080029,
+        lng: 10.3814147,
+        title: 'Tyskland',
+        }
+    ];
+    var contentStrings =[{
+                string: "TEST TEST"
+            },
+            {
+                string: "2"
+            }];
+        function myMap() {
+            const infowindow = new google.maps.InfoWindow();
+            map = new google.maps.Map(document.getElementById("googleMap"), {
+            center: centerCords,
+            zoom: 14.5,
+            mapTypeId: google.maps.MapTypeId.SATELLITE,
+            disableDefaultUI: true
+
+            });
+
+            for(var i = 0; i < markerLocations.length; i++){
+                const marker = new google.maps.Marker({
+                    position: markerLocations[i],
+                    map: map,
+                    title: markerLocations[i].title
+                });                
+            } 
+            marker.addListener('click', function() {
+            infowindow.close();
+            infowindow.setContent(`<div id="infowindow">${markerLocations.title}</div>`);
+            infowindow.open(map, marker);
+            });          
+        }
+    </script>
+
+     <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap" 
+     type="text/javascript">
+     </script>
+
+
         <div class="gallery-section">
             <div class="inner-width">
                 <h1>Kendte spots</h1>
@@ -94,59 +149,7 @@
             });
         </script>
 
-        <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
-    <div class="maps" id="googleMap" style="width:100%;height:400px;"></div>
-    <script>
-        var map;
-        var centerCords = {
-        lat: 55.3980029,
-        lng: 10.3814147
-        };
-        var markerLocations = [{
-        lat: 55.3980029,
-        lng: 10.3814147,
-        title: 'Odense',
-        },
-        {
-        lat: 54.2080029,
-        lng: 10.3814147,
-        title: 'Tyskland',
-        }
-    ];
-    var contentStrings =[{
-                string: "TEST TEST"
-            },
-            {
-                string: "2"
-            }];
-        function myMap() {
-            const infowindow = new google.maps.InfoWindow();
-            map = new google.maps.Map(document.getElementById("googleMap"), {
-            center: centerCords,
-            zoom: 14.5,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-            });
-
-            for(var i = 0; i < markerLocations.length; i++){
-                const marker = new google.maps.Marker({
-                    position: markerLocations[i],
-                    map: map,
-                    title: markerLocations[i].title
-                });                
-            } 
-            marker.addListener('click', function() {
-            infowindow.close();
-            infowindow.setContent(`<div id="infowindow">${markerLocations.title}</div>`);
-            infowindow.open(map, marker);
-            });          
-        }
-    </script>
-
-     <script
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap" 
-     type="text/javascript">
-     </script>
-
+</body>
         <footer class="footer">
             <div class="footer-content">
                 <p class="copyright">
@@ -160,5 +163,4 @@
                 </div>
             </div>
         </footer>
-    </body>
 </html>

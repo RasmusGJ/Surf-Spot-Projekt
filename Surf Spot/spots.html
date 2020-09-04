@@ -69,15 +69,37 @@
         lng: 10.3814147,
         title: 'Tyskland',
         }
-    ];
-    var contentStrings =[{
-                string: "TEST TEST"
-            },
-            {
-                string: "2"
-            }];
+        ];
+        
+        var airPressureValue = " ";
+        var airTemperatureValue = " ";
+        var windSpeedValue = " ";
+        var probPercipitationValue = " ";
+        function dataHentning(lat, lng){
+            //console.log(lat + " : " + lng);
+            fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=' + lat + '&lon=' + lng)
+            .then(response => response.json())
+            .then(data => {
+                //console.log(data)
+                airPressureValue = data['properties']['timeseries']['0']['data']['instant']['details']['air_pressure_at_sea_level'];
+                airTemperatureValue = data['properties']['timeseries']['0']['data']['instant']['details']['air_temperature'];
+                windSpeedValue = data['properties']['timeseries']['0']['data']['instant']['details']['wind_speed'];
+                probPercipitationValue = data['properties']['timeseries']['0']['data']['instant']['details']['wind_speed'];
+
+                airPressureValue = 'Air Pressure: ' + airPressureValue + ' p';
+                airTemperatureValue = 'Temperature: ' + airTemperatureValue + ' °C';
+                windSpeedValue = 'Wind Speed: ' + windSpeedValue + ' m/s';
+                probPercipitationValue = 'Percipitation Probability : ' + probPercipitationValue + ' %';
+            })          
+
+            .catch(err => alert("error"))
+            //console.log(airTemperatureValue + airPressureValue + windSpeedValue + probPercipitationValue);
+            return airTemperatureValue + airPressureValue + windSpeedValue + probPercipitationValue;
+        }
+
+        var contentString = ["hej0", "hej1", "hej2" ];
+
         function myMap() {
-            const infowindow = new google.maps.InfoWindow();
             map = new google.maps.Map(document.getElementById("googleMap"), {
             center: centerCords,
             zoom: 14.5,
@@ -86,19 +108,25 @@
 
             });
 
+            var infowindow = new google.maps.InfoWindow();
+
             for(var i = 0; i < markerLocations.length; i++){
-                const marker = new google.maps.Marker({
+                var marker = new google.maps.Marker({
                     position: markerLocations[i],
                     map: map,
                     title: markerLocations[i].title
-                });                
-            } 
-            marker.addListener('click', function() {
-            infowindow.close();
-            infowindow.setContent(`<div id="infowindow">${markerLocations.title}</div>`);
-            infowindow.open(map, marker);
-            });          
+                });  
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			        return function() {
+                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng));
+                        infowindow.setOptions({maxWidth: 200});
+                        infowindow.open(map, marker);
+			        }
+		        }) (marker, i));               
+            }                    
         }
+
+
     </script>
 
      <script

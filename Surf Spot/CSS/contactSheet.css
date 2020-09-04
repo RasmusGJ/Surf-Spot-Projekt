@@ -94,7 +94,7 @@
     transition: all 0.3s;
 
 }
-.container .contact-form form .inputgroup input.sub:hover{
+.container .contact-form form .inputgroup button.sub:hover{
     color: black;
     background: #1bfaad;
 }

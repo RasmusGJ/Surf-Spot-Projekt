@@ -90,6 +90,11 @@
                         infowindow.setOptions({maxWidth: 200});
                         infowindow.open(map, marker);
 			        }
-		        }) (marker, i));               
+                }) (marker, i));   
+                google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+			        return function() {
+                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng));
+			        }
+		        }) (marker, i));              
             }                    
         }

@@ -43,7 +43,9 @@
         var airTemperatureValue = " ";
         var windSpeedValue = " ";
         var probPercipitationValue = " ";
-        function dataHentning(lat, lng){
+        var contentHTML = " ";
+
+        function dataHentning(lat, lng, title){
             //console.log(lat + " : " + lng);
             fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact.json?lat=' + lat + '&lon=' + lng)
             .then(response => response.json())
@@ -54,18 +56,42 @@
                 windSpeedValue = data['properties']['timeseries']['0']['data']['instant']['details']['wind_speed'];
                 probPercipitationValue = data['properties']['timeseries']['0']['data']['instant']['details']['wind_speed'];
 
-                airPressureValue = 'Air Pressure: ' + airPressureValue + ' p';
-                airTemperatureValue = 'Temperature: ' + airTemperatureValue + ' °C';
-                windSpeedValue = 'Wind Speed: ' + windSpeedValue + ' m/s';
-                probPercipitationValue = 'Percipitation Probability : ' + probPercipitationValue + ' %';
+                // airPressureValue = 'Air Pressure: ' + airPressureValue + ' p';
+                // airTemperatureValue = 'Temperature: ' + airTemperatureValue + ' °C';
+                // windSpeedValue = 'Wind Speed: ' + windSpeedValue + ' m/s';
+                // probPercipitationValue = 'Percipitation Probability : ' + probPercipitationValue + ' %';
+
             })          
 
             .catch(err => alert("error"))
-            //console.log(airTemperatureValue + airPressureValue + windSpeedValue + probPercipitationValue);
-            return airTemperatureValue + airPressureValue + windSpeedValue + probPercipitationValue;
+            contentHTML =
+            "<div class='infowindowHeader'>" +
+            "<h2>" + title + "</h2>" +
+            "</div>" +
+           "<table>" +
+           "<tr>" +
+           "<td>Wave Height: </td>" +
+           "<td>" + airTemperatureValue + "</td>" +
+            "</tr>" +
+            "<tr> " +
+                "<td>Wave Period: </td>" +
+                "<td>asd</td>" +
+            "</tr>" +
+            "<tr>" +
+                "<td>Wind Speed: </td>" +
+                "<td>asd</td>" +
+            "</tr>" +
+            "<tr>" +
+                "<td>Water Temperature: </td>" +
+                "<td>asd</td>" +
+                "</tr>" +
+            "<tr>" +
+                "<td>Weather assesment: </td>" +
+                "<td>asd</td>" +
+            "</tr>" +
+            "</table>";
+            return contentHTML;
         }
-
-        var contentString = ["hej0", "hej1", "hej2" ];
 
         function myMap() {
             map = new google.maps.Map(document.getElementById("googleMap"), {
@@ -73,7 +99,6 @@
             zoom: 6.5,
             mapTypeId: google.maps.MapTypeId.SATELLITE,
             disableDefaultUI: true
-
             });
 
             var infowindow = new google.maps.InfoWindow();
@@ -86,8 +111,7 @@
                 });  
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			        return function() {
-                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng));
-                        infowindow.setOptions({maxWidth: 200});
+                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng, markerLocations[i].title));
                         infowindow.open(map, marker);
 			        }
                 }) (marker, i));   

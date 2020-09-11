@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>surf_spotter_dot_net_core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Index.cshtml">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+  </ItemGroup>
+
+</Project>

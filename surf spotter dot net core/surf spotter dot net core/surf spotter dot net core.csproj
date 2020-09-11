@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>surf_spotter_dot_net_core</RootNamespace>
+    <UserSecretsId>4a90752c-cf94-4650-94a1-3a0ebd99b7c6</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

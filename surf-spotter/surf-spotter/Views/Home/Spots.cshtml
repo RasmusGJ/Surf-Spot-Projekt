@@ -1,0 +1,58 @@
+﻿@{
+Layout = "_Layout";
+
+}
+<!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
+<div class="maps" id="googleMap"></div>
+<script src="JS/google_api_MET_api.js" type="text/javascript">
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap"
+        type="text/javascript">
+</script>
+
+
+<div class="gallery-section">
+    <div class="inner-width">
+        <h1>Kendte spots</h1>
+        <div class="border"></div>
+        <div class="gallery">
+
+            <a href="Assets/Images/surf-icon-16.png" class="image">
+                <img src="Assets/Images/surf-icon-16.png" alt="error">
+            </a>
+
+            <a href="Assets/Images/wave-1.jpg" class="image">
+                <img src="Assets/Images/wave-1.jpg" alt="error">
+            </a>
+
+            <a href="Assets/Images/wave2.jpg" class="image">
+                <img src="Assets/Images/wave2.jpg" alt="error">
+            </a>
+
+            <a href="Assets/Images/wave3.jpg" class="image">
+                <img src="Assets/Images/wave3.jpg" alt="error">
+            </a>
+
+            <a href="Assets/Images/wave4.jpg" class="image">
+                <img src="Assets/Images/wave4.jpg" alt="error">
+            </a>
+
+            <a href="Assets/Images/surf-icon-16.png" class="image">
+                <img src="Assets/Images/surf-icon-16.png" alt="error">
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".gallery").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+</script>
+

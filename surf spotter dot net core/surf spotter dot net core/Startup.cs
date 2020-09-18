@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using surf_spotter_dot_net_core.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace surf_spotter_dot_net_core
 {
@@ -27,6 +28,13 @@ namespace surf_spotter_dot_net_core
             services.AddControllersWithViews();
             //services.AddMvc();
             services.AddAuthentication(IISDefaults.AuthenticationScheme);
+
+            services.AddDbContext<UserDataContext>(options =>
+            {
+                var connectionString = Configuration.GetConnectionString("UserDataContext");
+                options.UseSqlServer(connectionString);
+            }
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

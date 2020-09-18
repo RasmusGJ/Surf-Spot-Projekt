@@ -12,10 +12,11 @@ namespace surf_spotter_dot_net_core.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly UserDataContext _db;
+        public HomeController(ILogger<HomeController> logger, UserDataContext db)
         {
             _logger = logger;
+            _db = db;
         }
         [Route("")]
         [Route("Index")]
@@ -34,14 +35,31 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
-        [Route("Kontakt")]
-        [Route("home/Kontakt")]
-        [Route("K")]
+        [HttpGet, Route("Kontakt")]
+        [HttpGet, Route("home/Kontakt")]
+        [HttpGet, Route("K")]
         public IActionResult Kontakt()
         {
             return View();
         }
 
+
+        //Metode til rent faktisk at registere
+
+        [HttpPost, Route("Signup")]
+        [HttpPost, Route("Home/Signup")]
+        [HttpPost, Route("SU")]
+        public IActionResult Signup([Bind("UserName, Email, Password")] User user)
+        {
+
+            if (!ModelState.IsValid)
+                return View();
+
+
+            _db.Users.Add(user);
+            _db.SaveChanges();
+            return View();
+        }
 
         [Route("Signup")]
         [Route("Home/Signup")]

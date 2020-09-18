@@ -1,4 +1,6 @@
-﻿@{
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model surf_spotter_dot_net_core.Models.User
+@{
     Layout = null;
 }
 
@@ -43,29 +45,32 @@
         <div class="container">
 
             <div class="login-form">
-                <form action="" method="post">
+                @using (Html.BeginForm())
+                {
                     <h2 id="reg">Registrer</h2>
                     <div class="inputgroup">
-                        <input type="text" name="Uname" required="required">
-                        <span>Brugernavn</span>
+                        @Html.LabelFor(x => x.UserName)
+                        @Html.EditorFor(x => x.UserName)
+                        @Html.ValidationMessageFor(x => x.UserName)
                     </div>
 
                     <div class="inputgroup">
-                        <input type="email" name="email" required="required">
-                        <span>Mail</span>
+                        @Html.LabelFor(x => x.Email)
+                        @Html.EditorFor(x => x.Email)
                     </div>
                     <div class="inputgroup">
-                        <input type="password" name="password" required="required">
-                        <span>Indtast adgangskode</span>
+                        @Html.LabelFor(x => x.Password)
+                        @Html.EditorFor(x => x.Password)>
                     </div>
 
                     <div class="inputgroup">
                         <button type="submit" class="sub">Registrer</button>
                     </div>
-                    <div class="inputgroup">
+                    <div class="inputgroup"> 
                         <input type="button" class="sub" onclick="location.href = 'login';" value="Login">
                     </div>
-                </form>
+                
+                }
             </div>
         </div>
     </div>

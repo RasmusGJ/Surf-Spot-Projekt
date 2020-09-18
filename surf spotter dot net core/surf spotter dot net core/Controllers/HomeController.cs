@@ -61,6 +61,14 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
+        [Route("showusers")]
+        public IActionResult ShowUsers()
+        {
+            var users = _db.Users.ToArray();
+            ViewBag.Users = users;
+            return View();
+        }
+
         [Route("Signup")]
         [Route("Home/Signup")]
         [Route("SU")]

@@ -47,6 +47,7 @@
             <div class="login-form">
                 @using (Html.BeginForm())
                 {
+                    @Html.ValidationSummary()
                     <h2 id="reg">Registrer</h2>
                     <div class="inputgroup">
                         @Html.LabelFor(x => x.UserName)
@@ -57,10 +58,13 @@
                     <div class="inputgroup">
                         @Html.LabelFor(x => x.Email)
                         @Html.EditorFor(x => x.Email)
+                        @Html.ValidationMessageFor(x => x.Email)
                     </div>
                     <div class="inputgroup">
                         @Html.LabelFor(x => x.Password)
-                        @Html.EditorFor(x => x.Password)>
+                        @Html.EditorFor(x => x.Password)
+                        @Html.ValidationMessageFor(x => x.Password)
+
                     </div>
 
                     <div class="inputgroup">

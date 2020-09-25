@@ -12,11 +12,15 @@ namespace surf_spotter_dot_net_core.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly UserDataContext _db;
-        public HomeController(ILogger<HomeController> logger, UserDataContext db)
+        private readonly UserDataContext _dbUser;
+        private readonly SpotDataContext _dbSpot;
+
+        public HomeController(ILogger<HomeController> logger, UserDataContext dbUser, SpotDataContext dbSpot)
         {
             _logger = logger;
-            _db = db;
+            _dbUser = dbUser;
+            _dbSpot = dbSpot;
+
         }
         [Route("")]
         [Route("Index")]
@@ -56,15 +60,15 @@ namespace surf_spotter_dot_net_core.Controllers
                 return View();
 
 
-            _db.Users.Add(user);
-            _db.SaveChanges();
+            _dbUser.Users.Add(user);
+            _dbUser.SaveChanges();
             return View();
         }
 
         [Route("showusers")]
         public IActionResult ShowUsers()
         {
-            var users = _db.Users.ToArray();
+            var users = _dbUser.Users.ToArray();
             ViewBag.Users = users;
             return View();
         }
@@ -86,6 +90,27 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
+        [HttpPost, Route("CreateSpot")]
+        [HttpPost, Route("Home/CreateSpot")]
+        [HttpPost, Route("CS")]
+        public IActionResult CreateSpot([Bind("Name, Lat, Lng")] Spot spot)
+        {
+
+            if (!ModelState.IsValid)
+                return View();
+
+
+            _dbSpot.Spots.Add(spot);
+            _dbSpot.SaveChanges();
+            return View();
+        }
+        [HttpGet, Route("CreateSpot")]
+        [HttpGet, Route("Home/CreateSpot")]
+        [HttpGet, Route("CS")]
+        public IActionResult CreateSpot()
+        {
+            return View();
+        }
 
         [Route("spots")]
         [Route("Home/spots")]

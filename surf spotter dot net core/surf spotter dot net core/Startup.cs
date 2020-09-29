@@ -34,11 +34,7 @@ namespace surf_spotter_dot_net_core
                 var connectionString = Configuration.GetConnectionString("UserDataContext");
                 options.UseSqlServer(connectionString);
             });
-            services.AddDbContext<SpotDataContext>(options =>
-            {
-                var connectionString = Configuration.GetConnectionString("SpotDataContext");
-                options.UseSqlServer(connectionString);
-            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

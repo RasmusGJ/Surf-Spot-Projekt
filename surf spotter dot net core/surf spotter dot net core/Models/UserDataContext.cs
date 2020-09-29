@@ -13,6 +13,7 @@ namespace surf_spotter_dot_net_core.Models
     {
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Spot> Spots { get; set; }
 
         public UserDataContext(DbContextOptions<UserDataContext> options)
             :base(options)

@@ -13,13 +13,13 @@ namespace surf_spotter_dot_net_core.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UserDataContext _dbUser;
-        private readonly SpotDataContext _dbSpot;
+        
 
-        public HomeController(ILogger<HomeController> logger, UserDataContext dbUser, SpotDataContext dbSpot)
+        public HomeController(ILogger<HomeController> logger, UserDataContext dbUser)
         {
             _logger = logger;
             _dbUser = dbUser;
-            _dbSpot = dbSpot;
+            
 
         }
         [Route("")]
@@ -93,15 +93,15 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpPost, Route("CreateSpot")]
         [HttpPost, Route("Home/CreateSpot")]
         [HttpPost, Route("CS")]
-        public IActionResult CreateSpot([Bind("Name, Lat, Lng")] Spot spot)
+        public IActionResult CreateSpot([Bind("Name, Lat, Lng, SpotStatus")] Spot spot)
         {
 
             if (!ModelState.IsValid)
                 return View();
 
 
-            _dbSpot.Spots.Add(spot);
-            _dbSpot.SaveChanges();
+            _dbUser.Spots.Add(spot);
+            _dbUser.SaveChanges();
             return View();
         }
         [HttpGet, Route("CreateSpot")]

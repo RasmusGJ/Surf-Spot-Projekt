@@ -19,9 +19,8 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             _logger = logger;
             _dbUser = dbUser;
-            
-
         }
+
         [Route("")]
         [Route("Index")]
         [Route("Home/Index")]
@@ -104,9 +103,9 @@ namespace surf_spotter_dot_net_core.Controllers
             _dbUser.SaveChanges();
             return View();
         }
-        [HttpGet, Route("CreateSpot")]
-        [HttpGet, Route("Home/CreateSpot")]
-        [HttpGet, Route("CS")]
+        [Route("CreateSpot")]
+        [Route("Home/CreateSpot")]
+        [Route("CS")]
         public IActionResult CreateSpot()
         {
             return View();

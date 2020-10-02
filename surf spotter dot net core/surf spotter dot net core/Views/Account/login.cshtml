@@ -1,4 +1,6 @@
-﻿@{
+﻿@model surf_spotter_dot_net_core.Models.Account.LoginViewModel
+
+@{
     Layout = "_Layout";
 }
 
@@ -17,18 +19,27 @@
             <div class="login-form">
                 <form action="" method="post">
                     <h2 id="login">Login</h2>
-                    <div class="inputgroup">
-                        <input type="text" name="Uname" required="required">
-                        <span>Brugernavn</span>
+                    <div asp-validation-summary="All" class="input-validation-error"></div>
+
+                    <div class="form-group">
+                        <label asp-for="UserName"></label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="field-validation-error"></span>
                     </div>
 
-                    <div class="inputgroup">
-                        <input type="password" name="password" required="required">
-                        <span>Indtast adgangskode</span>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="field-validation-error"></span>
                     </div>
-
-                    <div class="inputgroup">
-                        <button type="submit" class="sub">Login</button>
+                    <div class="form-group">
+                        <label asp-for="RememberMe"></label>
+                        <input type="checkbox" asp-for="RememberMe" />
+                        <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+                    </div>
+                    <div>
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="inputgroup">
                         <input type="button" class="sub" onclick="location.href = 'Signup';" value="Registrer">

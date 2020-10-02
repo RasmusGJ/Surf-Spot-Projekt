@@ -16,10 +16,6 @@ namespace surf_spotter_dot_net_core.Models.Account
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,50}$", ErrorMessage = "Password must be 8 characters long and have an uppercase letter, and a number")]
         public string Password { get; set; }
 
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-
         [Display(Name = "Remember me")]
         public bool RememberMe { get; set; }
     }

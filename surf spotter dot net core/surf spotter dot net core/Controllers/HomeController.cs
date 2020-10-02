@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using surf_spotter_dot_net_core.Models;
@@ -12,13 +13,13 @@ namespace surf_spotter_dot_net_core.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly UserDataContext _dbUser;
+        //private readonly UserDataContext _dbUser;
         
 
-        public HomeController(ILogger<HomeController> logger, UserDataContext dbUser)
+        public HomeController(ILogger<HomeController> logger /*UserDataContext dbUser*/)
         {
             _logger = logger;
-            _dbUser = dbUser;
+            //_dbUser = dbUser;
         }
 
         [Route("")]
@@ -48,7 +49,7 @@ namespace surf_spotter_dot_net_core.Controllers
 
 
         //Metode til rent faktisk at registere
-
+        /*
         [HttpPost, Route("Signup")]
         [HttpPost, Route("Home/Signup")]
         [HttpPost, Route("SU")]
@@ -88,7 +89,7 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             return View();
         }
-
+        
         [HttpPost, Route("CreateSpot")]
         [HttpPost, Route("Home/CreateSpot")]
         [HttpPost, Route("CS")]
@@ -109,7 +110,7 @@ namespace surf_spotter_dot_net_core.Controllers
         public IActionResult CreateSpot()
         {
             return View();
-        }
+        }*/
 
         [Route("spots")]
         [Route("Home/spots")]

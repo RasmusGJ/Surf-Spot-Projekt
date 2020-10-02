@@ -33,9 +33,24 @@
                 <li><a href="spots">spots</a></li>
                 <li><a href="Aboutus">Om os</a></li>
                 <li><a href="Kontakt">Kontakt</a></li>
-                <li><a href="login">Login</a></li>
-
-            </ul>
+                <li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form id="logout" action="@Url.Action("Logout", "Account")" method="post">
+                            <a href="javascript: $('#logout').submit()" class="last">
+                            Logout
+                                <br /><span class="tagline">@User.Identity.Name</span>
+                            </a>
+                        </form>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login", "Account")" title="log in" class="last">
+                            Login
+                        </a>
+                    }
+                    </li>
+                </ul>
         </nav>
     </div>
     <div class="overlay">

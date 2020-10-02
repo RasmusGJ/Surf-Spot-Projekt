@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<body>
+    <div class="login">
+        <div class="overlay">
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="Assets/Images/Oceanwaves-login.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <div class="container">
+
+            <div class="login-form">
+                <form action="" method="post">
+                    <h2 id="login">Login</h2>
+                    <div class="inputgroup">
+                        <input type="text" name="Uname" required="required">
+                        <span>Brugernavn</span>
+                    </div>
+
+                    <div class="inputgroup">
+                        <input type="password" name="password" required="required">
+                        <span>Indtast adgangskode</span>
+                    </div>
+
+                    <div class="inputgroup">
+                        <button type="submit" class="sub">Login</button>
+                    </div>
+                    <div class="inputgroup">
+                        <input type="button" class="sub" onclick="location.href = 'Signup';" value="Registrer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">
+                Copyright &copy; 2020, Team Y4 - All Rights Reserved
+            </p>
+            <div class="social-list">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+
+            </div>
+
+            <script src="login.js"></script>
+</body>
+
+</html>

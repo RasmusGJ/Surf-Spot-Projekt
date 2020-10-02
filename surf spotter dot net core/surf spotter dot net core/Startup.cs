@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using surf_spotter_dot_net_core.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace surf_spotter_dot_net_core
 {
@@ -29,11 +30,22 @@ namespace surf_spotter_dot_net_core
             //services.AddMvc();
             services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
-            services.AddDbContext<UserDataContext>(options =>
+            /*services.AddDbContext<UserDataContext>(options =>
             {
                 var connectionString = Configuration.GetConnectionString("UserDataContext");
                 options.UseSqlServer(connectionString);
+            });*/
+
+            services.AddDbContext<IdentityDataContext>(options =>
+            {
+                var connectionString = Configuration.GetConnectionString("IdentityDataContext");
+                options.UseSqlServer(connectionString);
             });
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDataContext>();
+
+            services.AddMvc();
             
         }
 
@@ -51,6 +63,8 @@ namespace surf_spotter_dot_net_core
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

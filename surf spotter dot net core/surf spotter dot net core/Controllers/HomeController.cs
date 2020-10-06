@@ -24,7 +24,7 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [Route("")]
         [Route("Index")]
-        [Route("Home/Index")]
+        //[Route("Home/Index")]
         [Route("H")]
         public IActionResult Index()
         {

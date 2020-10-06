@@ -22,12 +22,14 @@ namespace surf_spotter_dot_net_core.Controllers
             _signInManager = signInManager;
         }
 
+        [Route("Login")]
         public ActionResult Login()
         {
             return View(new LoginViewModel());
         }
 
-        [HttpPost]
+
+        [HttpPost, Route("Login")]
         public async Task<ActionResult> Login(LoginViewModel login, string returnUrl = null)
         {
             if (!ModelState.IsValid)
@@ -55,17 +57,18 @@ namespace surf_spotter_dot_net_core.Controllers
             await _signInManager.SignOutAsync();
 
             if(string.IsNullOrWhiteSpace(returnUrl))
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
 
             return Redirect(returnUrl);
         }
 
+        [Route("Signup")]
         public IActionResult SignUp()
         {
             return View(new RegisterViewModel());
         }
 
-        [HttpPost]
+        [HttpPost, Route("Signup")]
         public async Task<IActionResult> SignUp(RegisterViewModel registration)
         {
             if (!ModelState.IsValid)

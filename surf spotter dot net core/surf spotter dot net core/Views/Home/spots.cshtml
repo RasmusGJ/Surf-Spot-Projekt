@@ -1,10 +1,12 @@
-﻿<@{
+﻿@model surf_spotter_dot_net_core.Controllers.HomeController
+@{
     Layout = "_Layout";
     <div class="hero-text">
         <h1>Spots</h1>
     </div>
 }
-          <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
+
+    <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
     <div class="maps" id="googleMap"></div>
     <script>
         var map;

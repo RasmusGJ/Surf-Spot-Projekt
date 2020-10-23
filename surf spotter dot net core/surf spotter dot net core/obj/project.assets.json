@@ -8562,23 +8562,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\frede\\.nuget\\packages\\": {},
+    "C:\\Users\\regsa\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+      "projectUniqueName": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
       "projectName": "surf spotter dot net core",
-      "projectPath": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
-      "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
+      "projectPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+      "packagesPath": "C:\\Users\\regsa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\regsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

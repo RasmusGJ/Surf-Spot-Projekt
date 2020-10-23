@@ -1,11 +1,44 @@
 ﻿@model surf_spotter_dot_net_core.Models.Account.LoginViewModel
 
 @{
-    Layout = "_Layout";
+    Layout = null;
 }
 
 <!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Surf Spotter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width-device, initial scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/navBarSheet.css" />
+   
+    <link rel="stylesheet" href="CSS/loginSheet.css" type="text/css">
+    <link rel="stylesheet" href="CSS/footerSheet.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+</head>
+
 <body>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="Index">Hjem</a></li>
+                    <li><a href="spots">spots</a></li>
+                    <li><a href="Aboutus">Om os</a></li>
+                    <li><a href="Kontakt">Kontakt</a></li>
+                    <li><a href="login">Login</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="login">
         <div class="overlay">
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -18,33 +51,31 @@
 
             <div class="login-form">
                 <form action="" method="post">
+                    
+                    @using (Html.BeginForm())
+                    {
+                        @Html.ValidationSummary()
                     <h2 id="login">Login</h2>
-                    <div asp-validation-summary="All" class="input-validation-error"></div>
+                        <div class="inputgroup">
+                            @Html.LabelFor(x => x.UserName)
+                            @Html.EditorFor(x => x.UserName)
+                            @Html.ValidationMessageFor(x => x.UserName)
+                        </div>
+                        <div class="inputgroup">
+                            @Html.LabelFor(x => x.Password)
+                            @Html.EditorFor(x => x.Password)
+                            @Html.ValidationMessageFor(x => x.Password)
 
-                    <div class="form-group">
-                        <label asp-for="UserName"></label>
-                        <input asp-for="UserName" class="form-control" />
-                        <span asp-validation-for="UserName" class="field-validation-error"></span>
-                    </div>
+                        </div>
 
-                    <div class="form-group">
-                        <label asp-for="Password"></label>
-                        <input type="password" asp-for="Password" class="form-control" />
-                        <span asp-validation-for="Password" class="field-validation-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="RememberMe"></label>
-                        <input type="checkbox" asp-for="RememberMe" />
-                        <span asp-validation-for="RememberMe" class="field-validation-error"></span>
-                    </div>
-                    <div>
-                        <label>&nbsp;</label>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
-                    <div class="inputgroup">
-                        <input type="button" class="sub" onclick="location.href = 'Signup';" value="Registrer">
-                    </div>
-                </form>
+                        <div class="inputgroup">
+                            <button type="submit" class="sub">Login</button>
+                        </div>
+                        <div class="inputgroup">
+                            <input type="button" class="sub" onclick="location.href = 'Signup';" value="Registrer">
+                        </div>
+                    }
+                    </form>
             </div>
         </div>
     </div>

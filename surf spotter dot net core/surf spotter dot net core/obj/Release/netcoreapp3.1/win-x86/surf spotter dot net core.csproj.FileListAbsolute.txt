@@ -466,10 +466,7 @@ C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\CreateSpot.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\Kontakt.cshtml.g.cs
-C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\login.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\ShowUsers.cshtml.g.cs
-C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\Signup.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\spots.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Home\_ViewImports.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Shared\Error.cshtml.g.cs
@@ -486,3 +483,10 @@ C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\surf spotter dot net core.dll
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\surf spotter dot net core.pdb
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\surf spotter dot net core.genruntimeconfig.cache
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Release\netcoreapp3.1\win-x86\EntityFramework.SqlServer.dll
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Release\netcoreapp3.1\win-x86\EntityFramework.dll
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Release\netcoreapp3.1\win-x86\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Release\netcoreapp3.1\win-x86\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Release\netcoreapp3.1\win-x86\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Account\login.cshtml.g.cs
+C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Release\netcoreapp3.1\win-x86\Razor\Views\Account\Signup.cshtml.g.cs

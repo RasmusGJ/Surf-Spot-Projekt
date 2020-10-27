@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -70,9 +71,14 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("spots")]
         [Route("Home/spots")]
         [Route("S")]
-        public IActionResult spots()
+        public IActionResult Spots()
         {
-            return View();
+            Spot spot = new Spot();
+            foreach (Spot s in _db.Spots)
+            {
+                spot.Spots.Add(s);
+            }
+            return View(spot);
         }
 
         [Route("Privacy")]

@@ -1,30 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
+    "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
+    "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "projectUniqueName": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
         "projectName": "surf spotter dot net core",
-        "projectPath": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
-        "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\frede\\Desktop\\Surf-spot-project\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
+        "projectPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "packagesPath": "C:\\Users\\ras_j\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ras_j\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,17 +50,13 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.9, )"
             },
@@ -84,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

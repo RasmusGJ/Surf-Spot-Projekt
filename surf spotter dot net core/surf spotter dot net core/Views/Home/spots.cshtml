@@ -1,4 +1,4 @@
-﻿@model surf_spotter_dot_net_core.Controllers.HomeController
+﻿@model surf_spotter_dot_net_core.Models.Spot
 @{
     Layout = "_Layout";
     <div class="hero-text">
@@ -107,24 +107,27 @@
             });
 
             var infowindow = new google.maps.InfoWindow();
+            @{int p = 0;}
 
-            for (var i = 0; i < markerLocations.length; i++) {
+            for (var i = 0; i < @Model.Spots.Count; i++) {
                 var marker = new google.maps.Marker({
-                    position: markerLocations[i],
+                    position: @Model.Spots[p],
                     map: map,
-                    title: markerLocations[i].title
+                    title: @Model.Spots[p].Name
                 });
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng, markerLocations[i].title));
+                        infowindow.setContent(dataHentning(@Model.Spots[p].Lat, @Model.Spots[p].Lng, @Model.Spots[p].Name));
                         infowindow.open(map, marker);
                     }
                 })(marker, i));
                 google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(dataHentning(markerLocations[i].lat, markerLocations[i].lng));
+                        infowindow.setContent(dataHentning(@Model.Spots[p].Lat, @Model.Spots[p].Lng));
                     }
                 })(marker, i));
+                alert(@Model.Spots.Count)
+                @{p = p + 1;}
             }
         }
 

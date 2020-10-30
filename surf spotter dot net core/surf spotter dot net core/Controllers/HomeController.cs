@@ -78,7 +78,7 @@ namespace surf_spotter_dot_net_core.Controllers
             {
                 spot.Spots.Add(s);
             }
-            return View(spot);
+            return View(spot.Spots);
         }
 
         [Route("Privacy")]

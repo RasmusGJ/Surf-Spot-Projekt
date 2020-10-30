@@ -487,10 +487,8 @@ D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.csprojAssemblyReference.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\staticwebassets\surf spotter dot net core.StaticWebAssets.Manifest.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\staticwebassets\surf spotter dot net core.StaticWebAssets.xml
-D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.RazorAssemblyInfo.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.RazorAssemblyInfo.cs
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.AssemblyInfoInputs.cache
@@ -691,3 +689,7 @@ C:\Users\frede\Desktop\Surf-spot-project\Surf-Spot-Projekt\surf spotter dot net 
 C:\Users\frede\Desktop\Surf-spot-project\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.csproj.CopyComplete
 C:\Users\frede\Desktop\Surf-spot-project\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.dll
 C:\Users\frede\Desktop\Surf-spot-project\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.pdb
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cache
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.csprojAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿@model surf_spotter_dot_net_core.Models.Spot
+﻿@using System.Web.Helpers
+
 @{
     Layout = "_Layout";
     <div class="hero-text">
@@ -9,7 +10,7 @@
     <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
     <div class="maps" id="googleMap"></div>
     <script>
-        var map;
+       /*var map;
         var centerCords = {
             lat: 55.3980029,
             lng: 10.3814147
@@ -48,7 +49,7 @@
             lng: 9.696541,
             title: 'Løkken',
         }
-        ];
+        ];*/
 
         var airPressureValue = " ";
         var airTemperatureValue = " ";
@@ -98,7 +99,10 @@
             return contentHTML;
         }
 
+         var cities = @Html.Raw(Json.Serialize(Model));
+
         function myMap() {
+            alert(cities)
             map = new google.maps.Map(document.getElementById("googleMap"), {
                 center: centerCords,
                 zoom: 6.5,
@@ -107,27 +111,24 @@
             });
 
             var infowindow = new google.maps.InfoWindow();
-            @{int p = 0;}
 
-            for (var i = 0; i < @Model.Spots.Count; i++) {
+            for (var i = 0; i < cities.length; i++) {
                 var marker = new google.maps.Marker({
-                    position: @Model.Spots[p],
+                    position: cities[i],
                     map: map,
-                    title: @Model.Spots[p].Name
+                    title: cities[i].title
                 });
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(dataHentning(@Model.Spots[p].Lat, @Model.Spots[p].Lng, @Model.Spots[p].Name));
+                        infowindow.setContent(dataHentning(cities[i].Lat, cities[i].Lng, cities[i].Name));
                         infowindow.open(map, marker);
                     }
                 })(marker, i));
                 google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(dataHentning(@Model.Spots[p].Lat, @Model.Spots[p].Lng));
+                        infowindow.setContent(dataHentning(cities[i].Lat, cities[i].Lng));
                     }
                 })(marker, i));
-                alert(@Model.Spots.Count)
-                @{p = p + 1;}
             }
         }
 

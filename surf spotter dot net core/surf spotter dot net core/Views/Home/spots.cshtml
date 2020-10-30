@@ -1,20 +1,19 @@
-﻿@using System.Web.Helpers
-
-@{
+﻿@{
     Layout = "_Layout";
-    <div class="hero-text">
-        <h1>Spots</h1>
-    </div>
+<div class="hero-text">
+    <h1>Spots</h1>
+</div>
 }
 
-    <!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
-    <div class="maps" id="googleMap"></div>
-    <script>
-       /*var map;
+<!--Hentning af google api og placering af markers. Evt infobokse. Fungere ikke optimalt endnu....-->
+<div class="maps" id="googleMap"></div>
+<script>
+        var map;
         var centerCords = {
             lat: 55.3980029,
             lng: 10.3814147
         };
+        
         var markerLocations = [{
             lat: 57.044290,
             lng: 8.480431,
@@ -49,7 +48,7 @@
             lng: 9.696541,
             title: 'Løkken',
         }
-        ];*/
+        ];
 
         var airPressureValue = " ";
         var airTemperatureValue = " ";
@@ -98,11 +97,8 @@
                 "</table>";
             return contentHTML;
         }
-
-         var cities = @Html.Raw(Json.Serialize(Model));
-
+    
         function myMap() {
-            alert(cities)
             map = new google.maps.Map(document.getElementById("googleMap"), {
                 center: centerCords,
                 zoom: 6.5,
@@ -112,75 +108,69 @@
 
             var infowindow = new google.maps.InfoWindow();
 
-            for (var i = 0; i < cities.length; i++) {
+            for (var i = 0; i < markerLocations.length; i++) {
                 var marker = new google.maps.Marker({
-                    position: cities[i],
+                    position: markerLocations[i],
                     map: map,
-                    title: cities[i].title
+                    title: markerLocations[i].title
                 });
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(dataHentning(cities[i].Lat, cities[i].Lng, cities[i].Name));
+                        infowindow.setContent(dataHentning(markerLocations[i].Lat, markerLocations[i].Lng, markerLocations[i].Name));
                         infowindow.open(map, marker);
-                    }
-                })(marker, i));
-                google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
-                    return function () {
-                        infowindow.setContent(dataHentning(cities[i].Lat, cities[i].Lng));
                     }
                 })(marker, i));
             }
         }
 
-    </script>
+</script>
 
-     <script
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap"
-     type="text/javascript">
-     </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap"
+        type="text/javascript">
+</script>
 
 
-        <div class="gallery-section">
-            <div class="inner-width">
-                <h1>Kendte spots</h1>
-                <div class="border"></div>
-                <div class="gallery">
+<div class="gallery-section">
+    <div class="inner-width">
+        <h1>Kendte spots</h1>
+        <div class="border"></div>
+        <div class="gallery">
 
-                    <a href="Assets/Images/surf-icon-16.png" class="image">
-                        <img src="Assets/Images/surf-icon-16.png" alt="error">
-                    </a>
+            <a href="Assets/Images/surf-icon-16.png" class="image">
+                <img src="Assets/Images/surf-icon-16.png" alt="error">
+            </a>
 
-                    <a href="Assets/Images/wave-1.jpg" class="image">
-                        <img src="Assets/Images/wave-1.jpg" alt="error">
-                    </a>
+            <a href="Assets/Images/wave-1.jpg" class="image">
+                <img src="Assets/Images/wave-1.jpg" alt="error">
+            </a>
 
-                    <a href="Assets/Images/wave2.jpg" class="image">
-                        <img src="Assets/Images/wave2.jpg" alt="error">
-                    </a>
+            <a href="Assets/Images/wave2.jpg" class="image">
+                <img src="Assets/Images/wave2.jpg" alt="error">
+            </a>
 
-                    <a href="Assets/Images/wave3.jpg" class="image">
-                        <img src="Assets/Images/wave3.jpg" alt="error">
-                    </a>
+            <a href="Assets/Images/wave3.jpg" class="image">
+                <img src="Assets/Images/wave3.jpg" alt="error">
+            </a>
 
-                    <a href="Assets/Images/wave4.jpg" class="image">
-                        <img src="Assets/Images/wave4.jpg" alt="error">
-                    </a>
+            <a href="Assets/Images/wave4.jpg" class="image">
+                <img src="Assets/Images/wave4.jpg" alt="error">
+            </a>
 
-                    <a href="Assets/Images/surf-icon-16.png" class="image">
-                        <img src="Assets/Images/surf-icon-16.png" alt="error">
-                    </a>
+            <a href="Assets/Images/surf-icon-16.png" class="image">
+                <img src="Assets/Images/surf-icon-16.png" alt="error">
+            </a>
 
-                </div>
-            </div>
         </div>
+    </div>
+</div>
 
-        <script>
-            $(".gallery").magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery:{
-                    enabled:true
-                }
-            });
-        </script>
+<script>
+    $(".gallery").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+</script>
 

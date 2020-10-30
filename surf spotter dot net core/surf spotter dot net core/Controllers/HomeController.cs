@@ -18,11 +18,13 @@ namespace surf_spotter_dot_net_core.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IdentityDataContext _db;
+        private readonly HttpProxy _client;
 
-        public HomeController(ILogger<HomeController> logger, IdentityDataContext db)
+        public HomeController(ILogger<HomeController> logger, IdentityDataContext db, HttpProxy client)
         {
             _logger = logger;
             _db = db;
+            _client = client;
         }
 
         [Route("")]

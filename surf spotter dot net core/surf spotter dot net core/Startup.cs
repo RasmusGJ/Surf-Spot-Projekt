@@ -27,14 +27,8 @@ namespace surf_spotter_dot_net_core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //services.AddMvc();
-            services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
-            /*services.AddDbContext<UserDataContext>(options =>
-            {
-                var connectionString = Configuration.GetConnectionString("UserDataContext");
-                options.UseSqlServer(connectionString);
-            });*/
+            services.AddAuthentication(IISDefaults.AuthenticationScheme);
 
             services.AddDbContext<IdentityDataContext>(options =>
             {
@@ -44,6 +38,8 @@ namespace surf_spotter_dot_net_core
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDataContext>();
+
+            services.AddSingleton<HttpProxy>();
 
             services.AddMvc();
             

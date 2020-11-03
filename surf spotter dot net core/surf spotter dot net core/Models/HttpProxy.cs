@@ -41,20 +41,9 @@ namespace surf_spotter_dot_net_core.Models
                 var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
                 if (response.IsSuccessStatusCode)
                 {
-
-                    
                     result = await response.Content.ReadAsStringAsync();
-                    //JObject joResponse = JObject.Parse(result);
-                    var hourlys = JsonConvert.DeserializeObject<Root>(result);
-                    
-
+                    Root hourlys = JsonConvert.DeserializeObject<Root>(result);
                 }
-
-                
-                /*JObject ojObject = (JObject)joResponse["daily"];
-                JArray array = (JArray)ojObject["0"];*/
-                
-
                 return result;
             }
         }

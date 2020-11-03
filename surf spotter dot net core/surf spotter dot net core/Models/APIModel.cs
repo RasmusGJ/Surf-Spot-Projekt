@@ -124,9 +124,5 @@ namespace surf_spotter_dot_net_core.Models
         }
         
     }
-
-   
-
-
 }
 

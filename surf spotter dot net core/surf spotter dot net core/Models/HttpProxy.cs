@@ -32,9 +32,9 @@ namespace surf_spotter_dot_net_core.Models
             }
         }
         
-        public async Task<string> GetAllByHourly(int lat, int lng)
+        public async Task<List<Hourly>> GetAllByHourly(int lat, int lng)
         {
-            
+            Root hourlys = new Root();
             using (_client)
             {
                 var result = "";
@@ -42,9 +42,10 @@ namespace surf_spotter_dot_net_core.Models
                 if (response.IsSuccessStatusCode)
                 {
                     result = await response.Content.ReadAsStringAsync();
-                    Root hourlys = JsonConvert.DeserializeObject<Root>(result);
+                    hourlys = JsonConvert.DeserializeObject<Root>(result);
                 }
-                return result;
+                
+                return hourlys.Hourly;
             }
         }
 

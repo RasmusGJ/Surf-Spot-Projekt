@@ -32,7 +32,6 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("H")]
         public async Task<ActionResult> Index()
         {
-            await _client.GetAllByHourly(22, 55);
             return View();
         }
 
@@ -76,14 +75,15 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("spots")]
         [Route("Home/spots")]
         [Route("S")]
-        public IActionResult Spots()
+        public async Task<ActionResult> Spots()
         {
-            Spot spot = new Spot();
+            /*Spot spot = new Spot();
             foreach (Spot s in _db.Spots)
             {
                 spot.Spots.Add(s);
-            }
-            return View(spot.Spots);
+            }*/
+
+            return View(await _client.GetAllByHourly(22, 55));
         }
 
         [Route("Privacy")]

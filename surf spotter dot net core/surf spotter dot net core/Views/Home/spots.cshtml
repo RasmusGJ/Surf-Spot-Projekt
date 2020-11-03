@@ -1,4 +1,4 @@
-﻿@model IEnumerable<surf_spotter_dot_net_core.Models.Spot>
+﻿@model IEnumerable<surf_spotter_dot_net_core.Models.APIModel.Hourly>
 
 @{
     Layout = "_Layout";
@@ -173,16 +173,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Monday
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Lat)
+                Tuesday
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Lng)
+                Wedensday
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SpotStatus)
+                Thursday
             </th>
             <th></th>
         </tr>
@@ -192,21 +192,16 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Temp)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Lat)
+                    @Html.DisplayFor(modelItem => item.Pressure)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Lng)
+                    @Html.DisplayFor(modelItem => item.Feels_Like)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.SpotStatus)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    @Html.DisplayFor(modelItem => item.Wind_Speed)
                 </td>
             </tr>
         }

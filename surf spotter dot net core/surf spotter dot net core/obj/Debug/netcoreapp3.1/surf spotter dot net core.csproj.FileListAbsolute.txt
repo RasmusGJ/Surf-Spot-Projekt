@@ -699,3 +699,7 @@ C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs

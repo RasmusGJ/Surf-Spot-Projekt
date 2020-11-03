@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
+    "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
+    "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "projectUniqueName": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
         "projectName": "surf spotter dot net core",
-        "projectPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
-        "packagesPath": "C:\\Users\\Rasmus\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
+        "projectPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "packagesPath": "C:\\Users\\ras_j\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ras_j\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rasmus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ras_j\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -26,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -99,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

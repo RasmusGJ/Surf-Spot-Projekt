@@ -30,8 +30,9 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("")]
         [Route("Index")]
         [Route("H")]
-        public IActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            await _client.GetAllByHourly(22, 55);
             return View();
         }
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<surf_spotter_dot_net_core.ViewModels.SpotsViewModel>
+﻿@model surf_spotter_dot_net_core.ViewModels.SpotsViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -133,12 +133,9 @@
 </script>
 <div class="spotSelectDiv">
     <select class="spotSelect">
-        @foreach (var vm in Model)
+        @foreach (var item in Model.Spots )
         {
-            @foreach (var vmItem in vm.Spots )
-            {
-                <option value="1">@vmItem.Name</option>
-            }
+            <option value="1">@item.Name</option>
         }
     </select>
 </div>
@@ -163,27 +160,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var vm in Model)
-             {
-                @foreach (var vmItem in vm.Hourly)
-                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Temp)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Pressure)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Feels_Like)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
-                        </td>
-                    </tr>
-                 }
-             }
-
+            @foreach (var vmItem in Model.Hourly)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Temp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Pressure)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                    </td>
+                </tr>
+                }
             </tbody>
     </table>
 </div>

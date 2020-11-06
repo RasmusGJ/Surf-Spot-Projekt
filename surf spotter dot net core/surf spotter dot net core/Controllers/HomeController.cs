@@ -76,7 +76,7 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("spots")]
         [Route("Home/spots")]
         [Route("S")]
-        public async IAsyncEnumerable<SpotsViewModel> Spots()
+        public async Task<ActionResult<SpotsViewModel>> Spots()
         {
             SpotsViewModel spotsViewModel = new SpotsViewModel();
 

@@ -28,15 +28,14 @@ span{
   color: rgb(102, 102, 102);
 }
 
-td{
-  border-bottom: 1px solid black;
-  mask-border-width: 100%;
-  padding-top: 15px;
+td {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-top: 15px;
 }
 
 table{
   width: 250px;
-  border-collapse: collapse;
 }
 
 .storemapper-iw-container{

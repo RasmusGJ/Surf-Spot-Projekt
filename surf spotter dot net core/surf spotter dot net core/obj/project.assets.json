@@ -8626,20 +8626,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\regsa\\.nuget\\packages\\": {}
+    "C:\\Users\\Rasmus\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+      "projectUniqueName": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
       "projectName": "surf spotter dot net core",
-      "projectPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
-      "packagesPath": "C:\\Users\\regsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
+      "projectPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+      "packagesPath": "C:\\Users\\Rasmus\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\regsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rasmus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8719,7 +8724,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

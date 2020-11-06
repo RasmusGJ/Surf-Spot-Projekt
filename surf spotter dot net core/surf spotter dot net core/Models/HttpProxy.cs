@@ -42,40 +42,32 @@ namespace surf_spotter_dot_net_core.Models
                 }
                 
                 return hourlys.Hourly;
-            
         }
 
         public async Task<string> GetAllByDaily(double lat, double lng)
         {
-            
-                var result = "";
-                var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&exclude=minute,hourly,current&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
-                if (response.IsSuccessStatusCode)
-                {
-                    result = await response.Content.ReadAsStringAsync();
-                }
+            var result = "";
+            var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&exclude=minute,hourly,current&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
+            if (response.IsSuccessStatusCode)
+            {
+                result = await response.Content.ReadAsStringAsync();
+            }
 
-                return result;
-            
+            return result;
         }
         public async Task<List<Spot>> GetAllSpots()
         {
             Spot spot = new Spot();
-            
 
-                var result = "";
-                var response = await client.GetAsync($"http://localhost:57804/api/getall");
-                if (response.IsSuccessStatusCode)
-                {
-                    result = await response.Content.ReadAsStringAsync();
-                    spot.Spots = JsonConvert.DeserializeObject<List<Spot>>(result);
-                }
+            var result = "";
+            var response = await client.GetAsync($"http://localhost:57804/api/getall");
+            if (response.IsSuccessStatusCode)
+            {
+                result = await response.Content.ReadAsStringAsync();
+                spot.Spots = JsonConvert.DeserializeObject<List<Spot>>(result);
+            }
 
-                return spot.Spots;
-                 
-
-            
-
+            return spot.Spots;
         }
         
 
@@ -83,21 +75,15 @@ namespace surf_spotter_dot_net_core.Models
         {
             //skal lige fikses - ikke en liste :)
             Spot spot = new Spot();
-            
                 
-                var result = "";
-                var response = await client.GetAsync($"http://localhost:57804/api/getbyid/{id}");
-                if (response.IsSuccessStatusCode)
-                {
-                    result = await response.Content.ReadAsStringAsync();
-                    spot = JsonConvert.DeserializeObject<Spot>(result);
-                }
-
-                return spot;
-
-
-            
-
+            var result = "";
+            var response = await client.GetAsync($"http://localhost:57804/api/getbyid/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                result = await response.Content.ReadAsStringAsync();
+                spot = JsonConvert.DeserializeObject<Spot>(result);
+            }
+            return spot;
         }
     }
 }

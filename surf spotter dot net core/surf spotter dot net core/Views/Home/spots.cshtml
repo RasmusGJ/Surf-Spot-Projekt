@@ -1,4 +1,5 @@
-﻿@model IEnumerable<surf_spotter_dot_net_core.Models.APIModel.Hourly>
+﻿@model IEnumerable<surf_spotter_dot_net_core.ViewModels.SpotsViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = "_Layout";
@@ -130,84 +131,62 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzdejVAEmRXr66UrCtX_CWKzjZ4C0fXCA&callback=myMap"
         type="text/javascript">
 </script>
-
-<div class="vejr-tabel">
-
-    <table>
-        <tr>
-            <td></td>
-            <td>Torsdag</td>
-            <td>Fredag</td>
-            <td>Lørdag</td>
-        </tr>
-
-        <tr>
-            <td>Wind Speed</td>
-            <td>12*</td>
-            <td>123</td>
-            <td>123</td>
-        </tr>
-        <tr>
-            <td>Wave Length</td>
-            <td>123</td>
-            <td>123</td>
-            <td>123</td>
-        </tr>
-        <tr>
-            <td>Water Temperature</td>
-            <td>123</td>
-            <td>123</td>
-            <td>123</td>
-        </tr>
-        <tr>
-            <td>Air Temperature</td>
-            <td>23</td>
-            <td>123</td>
-            <td>123</td>
-        </tr>
-
-    </table>
-
-</div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Monday
-            </th>
-            <th>
-                Tuesday
-            </th>
-            <th>
-                Wedensday
-            </th>
-            <th>
-                Thursday
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+<div class="spotSelectDiv">
+    <select class="spotSelect">
+        @foreach (var vm in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Temp)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pressure)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Feels_Like)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Wind_Speed)
-                </td>
-            </tr>
+            @foreach (var vmItem in vm.Spots )
+            {
+                <option value="1">@vmItem.Name</option>
+            }
         }
-    </tbody>
-</table>
+    </select>
+</div>
 
+<div>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>
+                    Monday
+                </th>
+                <th>
+                    Tuesday
+                </th>
+                <th>
+                    Wedensday
+                </th>
+                <th>
+                    Thursday
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vm in Model)
+             {
+                @foreach (var vmItem in vm.Hourly)
+                 {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Temp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Pressure)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                        </td>
+                    </tr>
+                 }
+             }
+
+            </tbody>
+    </table>
+</div>
 
 <div class="gallery-section">
     <div class="inner-width">

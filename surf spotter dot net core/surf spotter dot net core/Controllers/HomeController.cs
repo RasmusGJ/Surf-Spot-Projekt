@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using surf_spotter_dot_net_core.Models;
+using surf_spotter_dot_net_core.ViewModels;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
@@ -75,10 +76,19 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("spots")]
         [Route("Home/spots")]
         [Route("S")]
-        public async Task<ActionResult> Spots()
+        public async IAsyncEnumerable<SpotsViewModel> Spots()
         {
+            SpotsViewModel spotsViewModel = new SpotsViewModel();
+
             var spot = _client.GetOneSpot(3);
-            return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));
+            var spots = await _client.GetAllSpots();
+            spotsViewModel.Spots = spots;
+
+            var hourly = _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
+            spotsViewModel.Hourly = hourly.Result;
+
+            return View(spotsViewModel);
+            //return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));
            
         }
 

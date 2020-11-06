@@ -77,13 +77,9 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("S")]
         public async Task<ActionResult> Spots()
         {
-            /*Spot spot = new Spot();
-            foreach (Spot s in _db.Spots)
-            {
-                spot.Spots.Add(s);
-            }*/
-
-            return View(await _client.GetAllByHourly(22, 55));
+            var spot = _client.GetOneSpot(3);
+            return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));
+           
         }
 
         [Route("Privacy")]
@@ -92,6 +88,15 @@ namespace surf_spotter_dot_net_core.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [Route("showspots")]
+        public async Task<ActionResult> ShowSpots()
+        {
+
+            var spots = await _client.GetAllSpots();
+
+            return View(spots);
         }
     }
 }

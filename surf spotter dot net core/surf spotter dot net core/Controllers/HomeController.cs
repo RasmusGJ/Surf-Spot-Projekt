@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using surf_spotter_dot_net_core.Models;
 using surf_spotter_dot_net_core.ViewModels;
+using System.Web;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
@@ -91,6 +93,25 @@ namespace surf_spotter_dot_net_core.Controllers
             //return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));
            
         }
+        /*[HttpPost, Route("spots")]
+        [HttpPost, Route("Home/spots")]
+        [HttpPost, Route("S")]
+        public async Task<ActionResult> Spots([Bind("Name, Lat, Lng, SpotStatus")] SpotsViewModel spotsViewModel)
+        {
+            spotsViewModel.Spots = await _client.GetAllSpots();
+            if (spotsViewModel.Spots != null)
+            {
+                List<SelectListItem> selectedItems = spotsViewModel.Spots.Where(p => spotsViewModel.Spots.Contains(p.Id)).ToList();
+                foreach (var Tea in selectedItems)
+                {
+                    Tea.Selected = true;
+                    ViewBag.Message += Tea.Text + " | ";
+                }
+            }
+            return View(spotsViewModel);
+
+            return View();
+        }*/
 
         [Route("Privacy")]
         [Route("home/Privacy")]

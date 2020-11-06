@@ -133,9 +133,9 @@
 </script>
 <div class="spotSelectDiv">
     <select class="spotSelect">
-        @foreach (var item in Model.Spots )
-        {
-            <option value="1">@item.Name</option>
+        @foreach (var item in Model.Spots)
+        {            
+            <option value="@item.Id">@item.Name</option>
         }
     </select>
 </div>

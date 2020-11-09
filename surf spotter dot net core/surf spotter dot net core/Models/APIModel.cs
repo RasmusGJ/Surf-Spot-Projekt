@@ -113,8 +113,8 @@ namespace surf_spotter_dot_net_core.Models
 
         public class Root
         {
-            public int Lat { get; set; }
-            public int Lon { get; set; }
+            public double Lat { get; set; }
+            public double Lon { get; set; }
             public string Timezone { get; set; }
             public int Timezone_Offset { get; set; }
             public Current Current { get; set; }

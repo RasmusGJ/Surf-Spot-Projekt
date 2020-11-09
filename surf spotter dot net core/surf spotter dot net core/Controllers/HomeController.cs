@@ -82,12 +82,12 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             SpotsViewModel spotsViewModel = new SpotsViewModel();
 
-            var spot = _client.GetOneSpot(3);
+            var spot = _client.GetOneSpot(2);
             var spots = await _client.GetAllSpots();
             spotsViewModel.Spots = spots;
 
-            var hourly = _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
-            spotsViewModel.Hourly = hourly.Result;
+            var hourly = await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
+            spotsViewModel.Hourly = hourly;
 
             return View(spotsViewModel);
             //return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));

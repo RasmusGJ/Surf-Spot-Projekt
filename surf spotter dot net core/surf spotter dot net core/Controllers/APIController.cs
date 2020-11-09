@@ -26,8 +26,8 @@ namespace surf_spotter_dot_net_core
         }
 
         // GET: api/API/5
-        [HttpGet("[action]/{id:long}")]
-        public IActionResult GetById(long id)
+        [HttpGet("[action]/{id:int}")]
+        public IActionResult GetById(int id)
         {
             var spot = _context.Spots.Find(id);
             if (spot == null)

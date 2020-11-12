@@ -134,11 +134,12 @@
 
 <div class="spotSelectDiv">
     <form asp-controller="Home" asp-action="Spots">
-        <select class="spotSelect">
-            @foreach (var item in Model.Spots)
+        <select class="spotSelect"
+                asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
+            @*@foreach (var item in Model.Spots)
              {
                 <option value="@item.Id">@item.Name</option>
-             }
+             }*@
         </select>
         <input type="submit" value="Action" class="btn btn-default" />
     </form>

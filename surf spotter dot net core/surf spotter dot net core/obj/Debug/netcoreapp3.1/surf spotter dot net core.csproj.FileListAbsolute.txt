@@ -692,7 +692,6 @@ C:\Users\frede\Desktop\Surf-spot-project\Surf-Spot-Projekt\surf spotter dot net 
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
@@ -708,3 +707,9 @@ C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowSpots.cshtml.g.cs
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.csprojAssemblyReference.cache
 C:\Users\ras_j\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowSpots.cshtml.g.cs
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cs
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cache

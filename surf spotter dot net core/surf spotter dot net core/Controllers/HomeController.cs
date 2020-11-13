@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -33,6 +34,7 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("")]
         [Route("Index")]
         [Route("H")]
+        [HttpGet]
         public async Task<ActionResult> Index()
         {
             return View();
@@ -41,6 +43,7 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("Aboutus")]
         [Route("home/Aboutus")]
         [Route("AU")]
+        [HttpGet]
         public IActionResult Aboutus()
         {
             return View();
@@ -57,6 +60,7 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("CreateSpot")]
         [Route("Home/CreateSpot")]
         [Route("CS")]
+        [HttpGet]
         public IActionResult CreateSpot()
         {
             return View();
@@ -78,6 +82,7 @@ namespace surf_spotter_dot_net_core.Controllers
         [Route("spots")]
         [Route("Home/spots")]
         [Route("S")]
+        [HttpGet]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
             SpotsViewModel spotsViewModel = new SpotsViewModel();
@@ -105,6 +110,7 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [Route("Privacy")]
         [Route("home/Privacy")]
+        [HttpGet]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -112,6 +118,8 @@ namespace surf_spotter_dot_net_core.Controllers
         }
 
         [Route("showspots")]
+        [HttpGet]
+
         public async Task<ActionResult> ShowSpots()
         {
 

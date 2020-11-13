@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
+    "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
+    "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "projectUniqueName": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
         "projectName": "surf spotter dot net core",
-        "projectPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
+        "projectPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\surf spotter dot net core.csproj",
+        "packagesPath": "C:\\Users\\Rasmus\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Surf-Spot-Projekt\\surf spotter dot net core\\surf spotter dot net core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Rasmus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -46,10 +50,6 @@
               "target": "Package",
               "version": "[2.2.3, )"
             },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.9, )"
@@ -75,6 +75,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             },
             "System-Web-Helpers.dll": {
               "target": "Package",

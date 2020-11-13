@@ -14,6 +14,7 @@ using surf_spotter_dot_net_core.Models;
 using surf_spotter_dot_net_core.ViewModels;
 using System.Web;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data.Entity.Infrastructure;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
@@ -104,7 +105,6 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpPost, Route("S")]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
-            
             return View(spotsViewModel);
         }
 
@@ -126,6 +126,23 @@ namespace surf_spotter_dot_net_core.Controllers
             var spots = await _client.GetAllSpots();
 
             return View(spots);
+        }
+
+        [Route("editspot")]
+        [Route("Home/editspot")]
+        [HttpGet]
+        public async Task<ActionResult> EditSpot()
+        {
+            var spot = await _client.GetOneSpot(1);
+            return View(spot);
+        }
+
+        [Route("editspot")]
+        [Route("Home/editspot")]
+        [HttpPost]
+        public IActionResult EditSpot(Spot spot)
+        {
+            return View();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,5 +14,7 @@ namespace surf_spotter_dot_net_core.Models
         public double Lat { get; set; }
         public double Lng { get; set; }
         public int SpotStatus { get; set; }
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
     }
 }

@@ -874,3 +874,13 @@ C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\sur
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.csproj.CopyComplete
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.dll
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.pdb
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\IdentityModel.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cs
+D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditSpot.cshtml.g.cs

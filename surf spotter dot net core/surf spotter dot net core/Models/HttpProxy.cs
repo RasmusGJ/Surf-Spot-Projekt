@@ -73,7 +73,6 @@ namespace surf_spotter_dot_net_core.Models
 
         public async Task<Spot> GetOneSpot(int id)
         {
-            //skal lige fikses - ikke en liste :)
             Spot spot = new Spot();
                 
             var result = "";

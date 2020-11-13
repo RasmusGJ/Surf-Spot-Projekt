@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using surf_spotter_dot_net_core.Models;
@@ -10,6 +11,7 @@ namespace surf_spotter_dot_net_core
 {
     [Route("api")]
     [ApiController]
+    [Authorize]
     public class APIController : ControllerBase
     {
         private readonly IdentityDataContext _context;

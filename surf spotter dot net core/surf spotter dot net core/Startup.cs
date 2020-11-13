@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using surf_spotter_dot_net_core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication;
 
 
 namespace surf_spotter_dot_net_core
@@ -31,6 +32,22 @@ namespace surf_spotter_dot_net_core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+
+            //kan godt v�re login ikke virker med disse �ndringer til authentication
+            //
+            // JWT token bearer er indf�rt, Dog er der problemer mellem login systemet bruger authentication
+            // og at dette bruger authentication. Koden for neen burde "overskrive" men g�r det ikke
+            // Tror ikke vi kan have b�de login og JWT tokens. Men API'et er "secured" i at man skal v�re logget ind :)
+            //
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "http://localhost:57804";
+                    options.RequireHttpsMetadata = false;
+                    options.Audience = "Surf-api";
+                }
+                );
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -55,7 +72,8 @@ namespace surf_spotter_dot_net_core
                 });
             });
 
-            services.AddAuthentication(IISDefaults.AuthenticationScheme);
+            //  ??????????????????services.AddAuthentication(IISDefaults.AuthenticationScheme);
+
 
             services.AddDbContext<IdentityDataContext>(options =>
             {

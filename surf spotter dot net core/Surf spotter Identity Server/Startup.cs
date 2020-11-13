@@ -20,7 +20,8 @@ namespace Surf_spotter_Identity_Server
             var builder = services.AddIdentityServer()
                 .AddInMemoryApiResources(Config.Apis)
                 .AddInMemoryClients(Config.Clients);
-                
+
+            builder.AddDeveloperSigningCredential();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

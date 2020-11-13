@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj": {}
+    "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj": {
+    "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
+        "projectUniqueName": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
         "projectName": "Surf spotter Identity Server",
-        "projectPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\obj\\",
+        "projectPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
+        "packagesPath": "C:\\Users\\regsa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\regsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,7 +44,7 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.10, )"
             }
           },
           "imports": [
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

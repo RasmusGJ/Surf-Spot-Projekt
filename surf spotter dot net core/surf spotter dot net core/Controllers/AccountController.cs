@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;

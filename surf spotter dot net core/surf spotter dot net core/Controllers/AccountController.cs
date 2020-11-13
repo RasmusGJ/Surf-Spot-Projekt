@@ -23,6 +23,7 @@ namespace surf_spotter_dot_net_core.Controllers
             _signInManager = signInManager;
         }
 
+        [HttpGet]
         [Route("Login")]
         public ActionResult Login()
         {
@@ -63,6 +64,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return Redirect(returnUrl);
         }
 
+        [HttpGet]
         [Route("Signup")]
         public IActionResult SignUp()
         {

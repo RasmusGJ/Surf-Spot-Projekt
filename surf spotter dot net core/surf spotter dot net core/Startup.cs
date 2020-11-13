@@ -1,7 +1,10 @@
 using System;
+using System.Reflection;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.IISIntegration;
@@ -12,6 +15,7 @@ using surf_spotter_dot_net_core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication;
+
 
 namespace surf_spotter_dot_net_core
 {
@@ -29,11 +33,12 @@ namespace surf_spotter_dot_net_core
         {
             services.AddControllersWithViews();
 
-            //kan godt være login ikke virker med disse ændringer til authentication
+
+            //kan godt vï¿½re login ikke virker med disse ï¿½ndringer til authentication
             //
-            // JWT token bearer er indført, Dog er der problemer mellem login systemet bruger authentication
-            // og at dette bruger authentication. Koden for neen burde "overskrive" men gør det ikke
-            // Tror ikke vi kan have både login og JWT tokens. Men API'et er "secured" i at man skal være logget ind :)
+            // JWT token bearer er indfï¿½rt, Dog er der problemer mellem login systemet bruger authentication
+            // og at dette bruger authentication. Koden for neen burde "overskrive" men gï¿½r det ikke
+            // Tror ikke vi kan have bï¿½de login og JWT tokens. Men API'et er "secured" i at man skal vï¿½re logget ind :)
             //
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
@@ -43,6 +48,32 @@ namespace surf_spotter_dot_net_core
                     options.Audience = "Surf-api";
                 }
                 );
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Spots API",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Shayne Boyer",
+                        Email = string.Empty,
+                        Url = new Uri("https://twitter.com/spboyer"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
+            });
+
+            //  ??????????????????services.AddAuthentication(IISDefaults.AuthenticationScheme);
+
 
             services.AddDbContext<IdentityDataContext>(options =>
             {
@@ -71,6 +102,19 @@ namespace surf_spotter_dot_net_core
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger(c =>
+            {
+                c.SerializeAsV2 = true;
+            });
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = "api";
+            });
 
             app.UseRouting();
 

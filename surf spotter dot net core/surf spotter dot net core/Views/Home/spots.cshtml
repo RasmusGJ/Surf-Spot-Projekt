@@ -1,5 +1,6 @@
 ﻿@model surf_spotter_dot_net_core.ViewModels.SpotsViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Globalization;
 
 @{
     Layout = "_Layout";
@@ -136,10 +137,6 @@
     <form asp-controller="Home" asp-action="Spots">
         <select class="spotSelect"
                 asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
-            @*@foreach (var item in Model.Spots)
-             {
-                <option value="@item.Id">@item.Name</option>
-             }*@
         </select>
         <input type="submit" value="Action" class="btn btn-default" />
     </form>
@@ -151,37 +148,58 @@
         <thead>
             <tr>
                 <th>
-                    Monday
+                    Time Stamp
                 </th>
                 <th>
-                    Tuesday
+                    Air Temperature
                 </th>
                 <th>
-                    Wedensday
+                    Air Pressure
                 </th>
                 <th>
-                    Thursday
+                    Feels Like
                 </th>
-                <th></th>
+                <th>
+                    Wind Speed
+                </th>
+
             </tr>
         </thead>
         <tbody>
+            @{
+                int i = 0;
+                int c = 0;
+            }
+
             @foreach (var vmItem in Model.Hourly)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Temp)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Pressure)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Feels_Like)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
-                    </td>
-                </tr>
+                if (c == 0)
+                {
+                    <tr>
+                        <td>
+                            @string.Format("+{0}:00", i)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Temp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Pressure)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                        </td>
+                    </tr>
+                    c = 1;
+                }
+                else
+                {
+                    c = 0;
+                }
+
+                i++;
             }
         </tbody>
     </table>

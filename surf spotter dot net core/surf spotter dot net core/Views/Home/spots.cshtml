@@ -142,14 +142,25 @@
     </form>
 </div>*@
 
-
 <div class="spotSelectDivLatLong">
-    
-    @using (Html.BeginForm())
-    {
-        
-        
-    }
+
+    <form action="Spots" method="post">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <div class="inputgroup">
+                @Html.LabelFor(x => x.Lat)
+                @Html.EditorFor(x => x.Lat)
+            </div>
+            <div class="inputgroup">
+                @Html.LabelFor(x => x.Lng)
+                @Html.EditorFor(x => x.Lng)
+            </div>
+            <div class="inputgroup">
+                <button type="submit" class="sub">Action</button>
+            </div>
+        }
+    </form>
 </div>
 
 

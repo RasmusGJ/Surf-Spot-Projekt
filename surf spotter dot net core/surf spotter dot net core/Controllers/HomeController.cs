@@ -98,9 +98,10 @@ namespace surf_spotter_dot_net_core.Controllers
             var hourly = await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
             spotsViewModel.Hourly = hourly;
 
+            var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng);
+            spotsViewModel.Daily = daily;
+
             return View(spotsViewModel);
-            //return View(await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng));
-           
         }
 
         [HttpPost, Route("spots")]

@@ -35,25 +35,28 @@ namespace surf_spotter_dot_net_core.Models
             
             var result = "";
             var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
-                if (response.IsSuccessStatusCode)
-                {
-                    result = await response.Content.ReadAsStringAsync();
-                    hourlys = JsonConvert.DeserializeObject<Root>(result);
-                }
-                
-                return hourlys.Hourly;
-        }
-
-        public async Task<string> GetAllByDaily(double lat, double lng)
-        {
-            var result = "";
-            var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&exclude=minute,hourly,current&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
             if (response.IsSuccessStatusCode)
             {
                 result = await response.Content.ReadAsStringAsync();
+                hourlys = JsonConvert.DeserializeObject<Root>(result);
+            }
+                
+            return hourlys.Hourly;
+        }
+
+        public async Task<List<Daily>> GetAllByDaily(double lat, double lng)
+        {
+            Root daily = new Root();
+
+            var result = "";
+            var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lng}&units=metric&appid=90109a7db32ae3dda1bca5e0458bc1da");
+            if (response.IsSuccessStatusCode)
+            {
+                result = await response.Content.ReadAsStringAsync();
+                daily = JsonConvert.DeserializeObject<Root>(result);
             }
 
-            return result;
+            return daily.Daily;
         }
         public async Task<List<Spot>> GetAllSpots()
         {

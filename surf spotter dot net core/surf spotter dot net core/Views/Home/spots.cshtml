@@ -132,17 +132,24 @@
         type="text/javascript">
 </script>
 
-<div class="spotSelectDiv">
+@*@<div class="spotSelectDiv">
     <form asp-controller="Home" asp-action="Spots">
         <select class="spotSelect"
                 asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
-            @*@foreach (var item in Model.Spots)
-             {
-                <option value="@item.Id">@item.Name</option>
-             }*@
+         
         </select>
         <input type="submit" value="Action" class="btn btn-default" />
     </form>
+</div>*@
+
+
+<div class="spotSelectDivLatLong">
+    
+    @using (Html.BeginForm())
+    {
+        
+        
+    }
 </div>
 
 
@@ -182,7 +189,7 @@
                         @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
                     </td>
                 </tr>
-            }
+                }
         </tbody>
     </table>
 </div>

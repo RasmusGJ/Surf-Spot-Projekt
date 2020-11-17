@@ -31,6 +31,7 @@ namespace surf_spotter_dot_net_core.Controllers
             _client = client;
         }
 
+        [Route("")]
         [Route("Index")]
         [Route("H")]
         [HttpGet]
@@ -84,6 +85,10 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpGet]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             SpotsViewModel spotsViewModel = new SpotsViewModel();
 
             var spot = _client.GetOneSpot(2);
@@ -103,6 +108,16 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpPost, Route("S")]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var spot = _client.GetOneSpot(2);
+            var spots = await _client.GetAllSpots();
+            spotsViewModel.Spots = spots;
+            
+            var hourly = await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
+            spotsViewModel.Hourly = hourly;
             return View(spotsViewModel);
         }
 

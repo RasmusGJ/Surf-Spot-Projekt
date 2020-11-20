@@ -236,6 +236,9 @@
                             Day
                         </th>
                         <th>
+                            Temperature
+                        </th>
+                        <th>
                             Feels like
                         </th>
                         <th>
@@ -260,38 +263,40 @@
 
                     @foreach (var vmItem in Model.Daily)
                     {
-                       
+
                     <tr>
                         <td>
-                            @string.Format(DateTime.Today.AddDays(l).ToString())
+                            @string.Format(DateTime.Today.AddDays(l).ToString("d/M/yy"))
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Temp.Day)
+                            @Html.DisplayFor(modelItem => vmItem.Temp.Day)°
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)
+                            @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)°
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Humidity)
+                            @Html.DisplayFor(modelItem => vmItem.Humidity) %
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed) m/s
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
+                            <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:10px;margin-left:10px;margin-right:10px;"/>
                         </td>
-                    </tr>
-                         
-                        
-                      
-
+                    </tr>                       
                         l++;
                     }
                 </tbody>
-            </table>
-        
-    
+            </table>      
 </div>
+
+<script>
+    function rotateImage() {
+        var img = document.getElementById('myimage');
+        img.style.transform = 'rotate(180deg)';
+    }
+</script>
 
 <div class="gallery-section">
     <div class="inner-width">
@@ -322,7 +327,6 @@
             <a href="Assets/Images/surf-icon-16.png" class="image">
                 <img src="Assets/Images/surf-icon-16.png" alt="error">
             </a>
-
         </div>
     </div>
 </div>

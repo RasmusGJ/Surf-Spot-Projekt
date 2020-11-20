@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,7 +21,9 @@ namespace surf_spotter_dot_net_core.Models.Middlewares
         }
         public async Task Invoke(HttpContext httpContext)
         {
-            
+            DateTime time = DateTime.Now;
+            Console.WriteLine("Timestamp THIS is the new request: " + time);
+            await _next(httpContext);
         }
     }
     public static class MyMiddlewareExtensions

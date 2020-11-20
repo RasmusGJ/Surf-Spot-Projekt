@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using surf_spotter_dot_net_core.Models;
+using surf_spotter_dot_net_core.Models.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication;
@@ -103,6 +104,7 @@ namespace surf_spotter_dot_net_core
             }
             app.UseStaticFiles();
 
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger(c =>
             {
@@ -121,6 +123,8 @@ namespace surf_spotter_dot_net_core
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCustomMiddleware();
 
             app.UseEndpoints(endpoints =>
             {

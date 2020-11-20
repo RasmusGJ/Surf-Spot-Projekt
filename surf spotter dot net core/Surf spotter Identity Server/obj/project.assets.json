@@ -517,19 +517,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\regsa\\.nuget\\packages\\": {}
+    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
       "projectName": "Surf spotter Identity Server",
-      "projectPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
-      "packagesPath": "C:\\Users\\regsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\regsa\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\obj\\",
+      "projectPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\Surf spotter Identity Server.csproj",
+      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruger\\Documents\\GitHub\\Surf-Spot-Projekt\\surf spotter dot net core\\Surf spotter Identity Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\regsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -541,6 +541,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -552,6 +553,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "IdentityServer4": {
             "target": "Package",
@@ -580,7 +582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

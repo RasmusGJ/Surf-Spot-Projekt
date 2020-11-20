@@ -133,14 +133,15 @@
         type="text/javascript">
 </script>
 
-@*@<div class="spotSelectDiv">
+<div class="spotSelectDiv">
     <form asp-controller="Home" asp-action="Spots">
         <select class="spotSelect"
+                asp-for="SpotId"
                 asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
         </select>
         <input type="submit" value="Action" class="btn btn-default" />
     </form>
-</div>*@
+</div>
 
 <div class="spotSelectDivLatLong">
 

@@ -36,11 +36,7 @@ namespace surf_spotter_dot_net_core.Models
             public List<Weather> Weather { get; set; }
         }
 
-        public class Minutely
-        {
-            public int Dt { get; set; }
-            public int Precipitation { get; set; }
-        }
+     
 
         public class Weather2
         {
@@ -118,7 +114,6 @@ namespace surf_spotter_dot_net_core.Models
             public string Timezone { get; set; }
             public int Timezone_Offset { get; set; }
             public Current Current { get; set; }
-            public List<Minutely> Minutely { get; set; }
             public List<Hourly> Hourly { get; set; }
             public List<Daily> Daily { get; set; }
         }

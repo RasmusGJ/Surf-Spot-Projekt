@@ -18,5 +18,6 @@ namespace surf_spotter_dot_net_core.ViewModels
         public List<APIModel.Daily> Daily { get; set; }
         public List<APIModel.Hourly> Hourly { get; set; }
         public List<Spot> Spots { get; set; }
+        public int SpotId { get; set; }
     }
 }

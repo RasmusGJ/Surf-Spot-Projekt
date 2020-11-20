@@ -79,8 +79,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }       
 
-        [Route("spots")]
-        [Route("Home/spots")]
+        [Route("spots")]       
         [Route("S")]
         [HttpGet]
         public async Task<ActionResult<SpotsViewModel>> Spots()
@@ -104,16 +103,24 @@ namespace surf_spotter_dot_net_core.Controllers
             return View(spotsViewModel);
         }
 
-        [HttpPost, Route("spots")]
-        [HttpPost, Route("Home/spots")]
-        [HttpPost, Route("S")]
+        [Route("spots")]
+        [Route("s")]
+        [Route("Home/spots")]
+        [HttpPost]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
             var spots = await _client.GetAllSpots();
             spotsViewModel.Spots = spots;
-            
-            var daily = await _client.GetAllByDaily(spotsViewModel.Lat, spotsViewModel.Lng);
-            spotsViewModel.Daily = daily;
+            foreach (Spot s in spotsViewModel.Spots)
+            {
+                if(s.Id == spotsViewModel.SpotId)
+                {
+                    var hourly = await _client.GetAllByHourly(s.Lat, s.Lng);
+                    spotsViewModel.Hourly = hourly;
+                    break;
+                }                               
+            }
+           
             return View(spotsViewModel);
         }
 
@@ -128,7 +135,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [Route("showspots")]
         [HttpGet]
-
         public async Task<ActionResult> ShowSpots()
         {
 

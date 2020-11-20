@@ -36,6 +36,8 @@ namespace surf_spotter_dot_net_core.Models
             public List<Weather> Weather { get; set; }
         }
 
+     
+
         public class Weather2
         {
             public int Id { get; set; }

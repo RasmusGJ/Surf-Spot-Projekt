@@ -77,11 +77,11 @@ namespace surf_spotter_dot_net_core.Controllers
             _db.Spots.Add(spot);
             _db.SaveChanges();
             return View();
-        }       
+        }
 
-        [Route("spots")]       
-        [Route("S")]
-        [HttpGet]
+        [HttpGet, Route("spots")]
+        [HttpGet, Route("Home/spots")]
+        [HttpGet, Route("s")]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
             if (!ModelState.IsValid)
@@ -103,10 +103,10 @@ namespace surf_spotter_dot_net_core.Controllers
             return View(spotsViewModel);
         }
 
-        [Route("spots")]
-        [Route("s")]
-        [Route("Home/spots")]
-        [HttpPost]
+
+        [HttpPost, Route("s")]
+        [HttpPost, Route("spots")]
+        [HttpPost, Route("Home/spots")]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
             var spots = await _client.GetAllSpots();
@@ -115,8 +115,8 @@ namespace surf_spotter_dot_net_core.Controllers
             {
                 if(s.Id == spotsViewModel.SpotId)
                 {
-                    var hourly = await _client.GetAllByHourly(s.Lat, s.Lng);
-                    spotsViewModel.Hourly = hourly;
+                    var daily = await _client.GetAllByDaily(s.Lat, s.Lng);
+                    spotsViewModel.Daily = daily;
                     break;
                 }                               
             }

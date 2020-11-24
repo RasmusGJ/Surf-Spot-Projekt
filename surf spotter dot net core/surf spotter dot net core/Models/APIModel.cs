@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace surf_spotter_dot_net_core.Models
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class APIModel
     {
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+        //Model layer that matches JSON data retrieved from external weather API!
         public class Weather
         {
             public int Id { get; set; }

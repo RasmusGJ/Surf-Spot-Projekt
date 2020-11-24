@@ -9,6 +9,7 @@ using static surf_spotter_dot_net_core.Models.APIModel;
 
 namespace surf_spotter_dot_net_core.Models
 {
+    //HttpProxy class used as middleman for all API calls. 
     public class HttpProxy
     {
         private readonly HttpClient client = new HttpClient();
@@ -16,6 +17,7 @@ namespace surf_spotter_dot_net_core.Models
         {
             
         }
+        //Gets all data from openweathermap API on the current weather!
         public async Task<string> GetAllByCurrent(double lat, double lng)
         {
 
@@ -29,6 +31,7 @@ namespace surf_spotter_dot_net_core.Models
              return result;
         }
         
+        //Gets all data from openweathermap API for an hourly forecast (48Hours from current)
         public async Task<List<Hourly>> GetAllByHourly(double lat, double lng)
         {
             Root hourlys = new Root();
@@ -44,6 +47,7 @@ namespace surf_spotter_dot_net_core.Models
             return hourlys.Hourly;
         }
 
+        //Gets all data from openweathermap API for a daily forecast (7days from current)
         public async Task<List<Daily>> GetAllByDaily(double lat, double lng)
         {
             Root daily = new Root();
@@ -58,6 +62,8 @@ namespace surf_spotter_dot_net_core.Models
 
             return daily.Daily;
         }
+
+        //Gets all spots from API
         public async Task<List<Spot>> GetAllSpots()
         {
             Spot spot = new Spot();
@@ -72,8 +78,8 @@ namespace surf_spotter_dot_net_core.Models
 
             return spot.Spots;
         }
-        
 
+        //Gets one spot by id from API
         public async Task<Spot> GetOneSpot(int id)
         {
             Spot spot = new Spot();

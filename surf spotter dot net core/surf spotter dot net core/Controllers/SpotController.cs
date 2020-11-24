@@ -9,6 +9,7 @@ using surf_spotter_dot_net_core.ViewModels;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class SpotController : Controller
     {
 
@@ -30,7 +31,6 @@ namespace surf_spotter_dot_net_core.Controllers
         // uses ViewModel to ensure to Model is usable in the View
         [HttpGet, Route("spots")]
         [HttpGet, Route("s")]
-        [HttpGet, Route("")]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
             // Check if the model state is valid, else return the view
@@ -57,7 +57,6 @@ namespace surf_spotter_dot_net_core.Controllers
         // Passed data is SpotViewModel.SpotId
         [HttpPost, Route("spots")]
         [HttpPost, Route("s")]
-        [HttpPost, Route("")]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
             var spots = await _client.GetAllSpots();
@@ -78,7 +77,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [Route("CreateSpot")]
         [Route("CS")]
-        [Route("")]
         [HttpGet]
         public IActionResult CreateSpot()
         {
@@ -89,7 +87,6 @@ namespace surf_spotter_dot_net_core.Controllers
         // Model binding to ensure the correct props get set
         [HttpPost, Route("CreateSpot")]
         [HttpPost, Route("CS")]
-        [HttpPost, Route("")]
         public IActionResult CreateSpot([Bind("Name, Lat, Lng, SpotStatus")] Spot spot)
         {
             if (!ModelState.IsValid)

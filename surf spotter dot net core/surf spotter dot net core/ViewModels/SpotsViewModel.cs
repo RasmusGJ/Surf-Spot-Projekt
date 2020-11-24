@@ -11,6 +11,7 @@ namespace surf_spotter_dot_net_core.ViewModels
     {
         // Needed in Viewmodel class as Viewmodel is the Model in view
         public Spot CurrentSpot { get; set; } = new Spot();
+        public Comment CurrentComment { get; set; } = new Comment();
 
         // Lists of model classes to display in view
         public List<APIModel.Daily> Daily { get; set; }

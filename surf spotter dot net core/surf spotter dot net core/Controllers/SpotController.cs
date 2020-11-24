@@ -136,10 +136,8 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpPost, Route("CreateComment")]
         public IActionResult CreateComment(SpotsViewModel spotsViewModel)
         {
-           
             spotsViewModel.CurrentComment.Author = User.Identity.Name;
-            comment.SpotId = spotsViewModel.SpotId;
-            _db.Comments.Add(comment);
+            _db.Comments.Add(spotsViewModel.CurrentComment);
             _db.SaveChanges();
             return View();
         }

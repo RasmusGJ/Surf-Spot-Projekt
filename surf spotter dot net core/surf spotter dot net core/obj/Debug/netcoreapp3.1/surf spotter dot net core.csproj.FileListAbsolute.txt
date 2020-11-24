@@ -848,12 +848,9 @@ C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\sur
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Account\login.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Account\Signup.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Aboutus.cshtml.g.cs
-C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\CreateSpot.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Kontakt.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\ShowSpots.cshtml.g.cs
-C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\spots.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\View.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ViewImports.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -909,7 +906,6 @@ C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\sur
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\scopedcss\bundle\surf spotter dot net core.styles.css
-C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditSpot.cshtml.g.cs
 C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\surf spotter dot net core.genruntimeconfig.cache
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
@@ -921,3 +917,7 @@ D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\EditSpot.cshtml.g.cs
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\ShowSpots.cshtml.g.cs
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\spots.cshtml.g.cs
+C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\CreateSpot.cshtml.g.cs
+C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\EditSpot.cshtml.g.cs
+C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\ShowSpots.cshtml.g.cs
+C:\Users\Bruger\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\surf spotter dot net core\obj\Debug\netcoreapp3.1\Razor\Views\Spot\spots.cshtml.g.cs

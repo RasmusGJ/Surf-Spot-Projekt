@@ -133,17 +133,32 @@
         type="text/javascript">
 </script>
 
-<div class="spotSelectDiv">
-        <form action ="spots" method="post">
-            <select class="spotSelect"
-                    asp-for="SpotId"
-                    asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
-            </select>
-            <input type="submit" value="Find Data" class="btn btn-default" />
-        </form>
-    </div>
+@foreach (var s in Model.Spots)
+{
+    if (s.Id == Model.CurrentSpot.Id)
+    {
+        <h2 style="text-align:center; margin-top:75px">@s.Name</h2>
+    }
+}
 
-<div class="spotSelectDivLatLong">
+<div class="spotSelectDiv">
+    <form action="spots" method="post">
+        <select class="spotSelect"
+                asp-for="CurrentSpot.Id"
+                asp-items="@(new SelectList(Model.Spots,"Id","Name"))">
+        </select>
+
+        <select class="unitSelect"
+                asp-for="SpotFormat">
+            <option value="1">Metric</option>
+            <option value="2">Imperial</option>
+        </select>
+
+        <input type="submit" value="Go To Spot!" class="submit-btn" />
+    </form>
+</div>
+
+@*@<div class="spotSelectDivLatLong">
 
     <form action="Spots" method="post">
         @using (Html.BeginForm())
@@ -162,10 +177,9 @@
             </div>
         }
     </form>
-</div>
+</div>*@
+
 <div>
-    <label for="wdata">Change weather data</label>
-    
         
             @*<table class="dataTable">
                 <thead>
@@ -259,7 +273,6 @@
 
                     @{
                         int l = 0;
-                        int d = 0;
                     }
 
                     @foreach (var vmItem in Model.Daily)
@@ -283,7 +296,7 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
-                            <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:10px;margin-left:10px;margin-right:10px;"/>
+                            <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:5px;margin-left:10px;margin-right:10px;"/>
                         </td>
                     </tr>                       
                         l++;
@@ -291,13 +304,6 @@
                 </tbody>
             </table>      
 </div>
-
-<script>
-    function rotateImage() {
-        var img = document.getElementById('myimage');
-        img.style.transform = 'rotate(180deg)';
-    }
-</script>
 
 <div class="gallery-section">
     <div class="inner-width">

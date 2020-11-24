@@ -42,11 +42,12 @@ namespace surf_spotter_dot_net_core.Controllers
 
             // Get the data from spot with Id 2 as standard data
             var spot = _client.GetOneSpot(2);
+            spotsViewModel.CurrentSpot.Id = 2;
             var spots = await _client.GetAllSpots();
             spotsViewModel.Spots = spots;
             
             // Make use of the props Lat and Lng to fetch the weather data
-            var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng);
+            var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng, 1);
             
             spotsViewModel.Daily = daily;
 
@@ -65,9 +66,9 @@ namespace surf_spotter_dot_net_core.Controllers
             // Iterate to find the according Spot and fetch the data
             foreach (Spot s in spotsViewModel.Spots)
             {
-                if (s.Id == spotsViewModel.SpotId)
+                if (s.Id == spotsViewModel.CurrentSpot.Id)
                 {
-                    var daily = await _client.GetAllByDaily(s.Lat, s.Lng);
+                    var daily = await _client.GetAllByDaily(s.Lat, s.Lng, spotsViewModel.SpotFormat);
                     spotsViewModel.Daily = daily;
                     break;
                 }

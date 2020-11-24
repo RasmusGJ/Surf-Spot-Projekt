@@ -47,9 +47,10 @@ namespace surf_spotter_dot_net_core.Controllers
             
             // Make use of the props Lat and Lng to fetch the weather data
             var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng);
-            // Show Daily data
+            
             spotsViewModel.Daily = daily;
 
+            // Returns viewmodelobject with Daily data set!
             return View(spotsViewModel);
         }
 

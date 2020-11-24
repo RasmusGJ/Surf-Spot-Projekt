@@ -22,7 +22,7 @@ namespace surf_spotter_dot_net_core
         }
 
         // GET: api/API
-        // Use Proxyclass object to get spots from EF Database
+        // Use identity db object to get spots
         [HttpGet("[action]")]
         public IActionResult GetAll()
         {
@@ -31,7 +31,7 @@ namespace surf_spotter_dot_net_core
         }
 
         // GET: api/API/5
-        // Get from Proxyclass by id 
+        // Get from EF core identity db by id 
         [HttpGet("[action]/{id:int}")]
         public async Task<ActionResult> GetById(int id)
         {

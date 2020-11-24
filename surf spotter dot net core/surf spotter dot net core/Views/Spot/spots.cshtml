@@ -305,36 +305,35 @@
             </table>      
 </div>
 
-<div class="gallery-section">
-    <div class="inner-width">
-        <h1>Kendte spots</h1>
-        <div class="border"></div>
-        <div class="gallery">
+<div class="container">
 
-            <a href="Assets/Images/surf-icon-16.png" class="image">
-                <img src="Assets/Images/surf-icon-16.png" alt="error">
-            </a>
+    <div class="comment-form">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <h2 id="reg">Ny kommentar</h2>
+            <div class="inputgroup">
+                @Html.LabelFor(x => x.CurrentComment.Description)
+                @Html.EditorFor(x => x.CurrentComment.Description)
+                @Html.ValidationMessageFor(x => x.CurrentComment.Description)
+            </div>
 
-            <a href="Assets/Images/wave-1.jpg" class="image">
-                <img src="Assets/Images/wave-1.jpg" alt="error">
-            </a>
+            <div class="inputgroup">
+                @Html.LabelFor(x => x.CurrentComment.WaveDescription)
+                @Html.EditorFor(x => x.CurrentComment.WaveDescription)
+                @Html.ValidationMessageFor(x => x.CurrentComment.WaveDescription)
+            </div>
+            <div class="inputgroup">
+                @Html.LabelFor(x => x.CurrentComment.AmountOfPeople)
+                @Html.EditorFor(x => x.CurrentComment.AmountOfPeople)
+                @Html.ValidationMessageFor(x => x.CurrentComment.AmountOfPeople)
 
-            <a href="Assets/Images/wave2.jpg" class="image">
-                <img src="Assets/Images/wave2.jpg" alt="error">
-            </a>
-
-            <a href="Assets/Images/wave3.jpg" class="image">
-                <img src="Assets/Images/wave3.jpg" alt="error">
-            </a>
-
-            <a href="Assets/Images/wave4.jpg" class="image">
-                <img src="Assets/Images/wave4.jpg" alt="error">
-            </a>
-
-            <a href="Assets/Images/surf-icon-16.png" class="image">
-                <img src="Assets/Images/surf-icon-16.png" alt="error">
-            </a>
-        </div>
+            </div>
+            
+            <div class="inputgroup">
+                <button type="submit" class="sub">Tilføj kommentar</button>
+            </div>
+        }
     </div>
 </div>
 

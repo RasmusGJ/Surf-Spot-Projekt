@@ -8,7 +8,7 @@ namespace surf_spotter_dot_net_core.Models
 {
     public class APIModel
     {
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+        //Model layer that matches JSON data retrieved from external weather API!
         public class Weather
         {
             public int Id { get; set; }

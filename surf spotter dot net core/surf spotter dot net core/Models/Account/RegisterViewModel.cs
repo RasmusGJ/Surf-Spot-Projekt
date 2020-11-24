@@ -8,7 +8,7 @@ namespace surf_spotter_dot_net_core.Models.Account
 {
     public class RegisterViewModel
     {
-
+        //Data required in registration fields
         [Required]
         public string UserName { get; set; }
 
@@ -20,6 +20,9 @@ namespace surf_spotter_dot_net_core.Models.Account
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
+        //AccountStatus might be implimented in the future, to verify permissions and 
+        //features.
 
         //public int AccountStatus { get; set; }
     }

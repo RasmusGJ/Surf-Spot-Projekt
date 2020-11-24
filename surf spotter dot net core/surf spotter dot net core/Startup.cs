@@ -35,7 +35,7 @@ namespace surf_spotter_dot_net_core
             services.AddControllersWithViews();
 
 
-            //kan godt v�re login ikke virker med disse �ndringer til authentication
+            //kan godt vaere login ikke virker med disse aendringer til authentication
             //
             // JWT token bearer er indf�rt, Dog er der problemer mellem login systemet bruger authentication
             // og at dette bruger authentication. Koden for neen burde "overskrive" men g�r det ikke

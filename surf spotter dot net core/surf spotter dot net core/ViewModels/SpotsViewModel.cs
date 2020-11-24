@@ -20,5 +20,8 @@ namespace surf_spotter_dot_net_core.ViewModels
 
         //Sets the specified data format(metric, imperial etc.)
         public int SpotFormat { get; set; }
+
+        //Sets the time format displayed on view
+        public int TimeFormat { get; set; }
     }
 }

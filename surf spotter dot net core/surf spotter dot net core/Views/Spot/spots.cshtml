@@ -181,128 +181,128 @@
 
 <div>
         
-            @*<table class="dataTable">
-                <thead>
+    @*<table class="dataTable">
+        <thead>
+            <tr>
+                <th>
+                    Time Stamp
+                </th>
+                <th>
+                    Air Temperature
+                </th>
+                <th>
+                    Air Pressure
+                </th>
+                <th>
+                    Feels Like
+                </th>
+                <th>
+                    Wind Speed
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @{
+                int i = 0;
+                int c = 0;
+            }
+
+            @foreach (var vmItem in Model.Hourly)
+            {
+                if (c == 0)
+                {
                     <tr>
-                        <th>
-                            Time Stamp
-                        </th>
-                        <th>
-                            Air Temperature
-                        </th>
-                        <th>
-                            Air Pressure
-                        </th>
-                        <th>
-                            Feels Like
-                        </th>
-                        <th>
-                            Wind Speed
-                        </th>
-
+                        <td>
+                            @string.Format("+{0}:00", i)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Temp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Pressure)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
+                    c = 1;
+                }
+                else
+                {
+                    c = 0;
+                }
 
-
-                    @{
-                        int i = 0;
-                        int c = 0;
-                    }
-
-                    @foreach (var vmItem in Model.Hourly)
-                    {
-                        if (c == 0)
-                        {
-                            <tr>
-                                <td>
-                                    @string.Format("+{0}:00", i)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => vmItem.Temp)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => vmItem.Pressure)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => vmItem.Feels_Like)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
-                                </td>
-                            </tr>
-                            c = 1;
-                        }
-                        else
-                        {
-                            c = 0;
-                        }
-
-                        i++;
-                    }
-                </tbody>
-            </table>*@
+                i++;
+            }
+        </tbody>
+    </table>*@
         
 
-            <table class="dataTable">
-                <thead>
-                    <tr>
-                        <th>
-                            Day
-                        </th>
-                        <th>
-                            Temperature
-                        </th>
-                        <th>
-                            Feels like
-                        </th>
-                        <th>
-                            Humidity
-                        </th>
-                        <th>
-                            Wind speed
-                        </th>
-                        <th>
-                            Wind Deg
-                        </th>
+    <table class="dataTable">
+        <thead>
+            <tr>
+                <th>
+                    Day
+                </th>
+                <th>
+                    Temperature
+                </th>
+                <th>
+                    Feels like
+                </th>
+                <th>
+                    Humidity
+                </th>
+                <th>
+                    Wind speed
+                </th>
+                <th>
+                    Wind Deg
+                </th>
 
-                    </tr>
-                </thead>
-                <tbody>
+            </tr>
+        </thead>
+        <tbody>
 
 
-                    @{
-                        int l = 0;
-                    }
+            @{
+                int l = 0;
+            }
 
-                    @foreach (var vmItem in Model.Daily)
-                    {
+            @foreach (var vmItem in Model.Daily)
+             {
 
-                    <tr>
-                        <td>
-                            @string.Format(DateTime.Today.AddDays(l).ToString("d/M/yy"))
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Temp.Day)°
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)°
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Humidity) %
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed) m/s
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
-                            <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:5px;margin-left:10px;margin-right:10px;"/>
-                        </td>
-                    </tr>                       
-                        l++;
-                    }
-                </tbody>
-            </table>      
+                <tr>
+                    <td>
+                        @string.Format(DateTime.Today.AddDays(l).ToString("d/M/yy"))
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Temp.Day)°
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)°
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Humidity) %
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Wind_Speed) m/s
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
+                        <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:5px;margin-left:10px;margin-right:10px;"/>
+                    </td>
+                </tr>                       
+                l++;
+             }
+        </tbody>
+    </table>      
 </div>
 
 <div class="gallery-section">

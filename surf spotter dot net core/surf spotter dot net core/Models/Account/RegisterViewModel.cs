@@ -8,7 +8,6 @@ namespace surf_spotter_dot_net_core.Models.Account
 {
     public class RegisterViewModel
     {
-        //public long Id { get; set; }
 
         [Required]
         public string UserName { get; set; }

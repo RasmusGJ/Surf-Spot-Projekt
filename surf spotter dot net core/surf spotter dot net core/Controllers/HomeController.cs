@@ -57,8 +57,6 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
-       
-
         [Route("Privacy")]
         [Route("home/Privacy")]
         [HttpGet]

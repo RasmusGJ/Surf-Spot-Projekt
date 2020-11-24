@@ -24,7 +24,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [HttpGet, Route("spots")]
         [HttpGet, Route("s")]
-        [HttpGet, Route("")]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
             if (!ModelState.IsValid)
@@ -48,7 +47,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [HttpPost, Route("spots")]
         [HttpPost, Route("s")]
-        [HttpPost, Route("")]
         public async Task<ActionResult> Spots(SpotsViewModel spotsViewModel)
         {
             var spots = await _client.GetAllSpots();
@@ -68,7 +66,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [Route("CreateSpot")]
         [Route("CS")]
-        [Route("")]
         [HttpGet]
         public IActionResult CreateSpot()
         {
@@ -77,7 +74,6 @@ namespace surf_spotter_dot_net_core.Controllers
 
         [HttpPost, Route("CreateSpot")]
         [HttpPost, Route("CS")]
-        [HttpPost, Route("")]
         public IActionResult CreateSpot([Bind("Name, Lat, Lng, SpotStatus")] Spot spot)
         {
             if (!ModelState.IsValid)

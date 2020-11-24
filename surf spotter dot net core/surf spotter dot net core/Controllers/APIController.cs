@@ -13,12 +13,16 @@ namespace surf_spotter_dot_net_core
     [ApiController]
     public class APIController : ControllerBase
     {
+        // Dependency injection of EF core Database
+        // Gives a object we can use to make use of the database
         private readonly IdentityDataContext _context;
         public APIController(IdentityDataContext context)
         {
             _context = context;
         }
+
         // GET: api/API
+        // Use Proxyclass object to get spots from EF Database
         [HttpGet("[action]")]
         public IActionResult GetAll()
         {
@@ -27,6 +31,7 @@ namespace surf_spotter_dot_net_core
         }
 
         // GET: api/API/5
+        // Get from Proxyclass by id 
         [HttpGet("[action]/{id:int}")]
         public async Task<ActionResult> GetById(int id)
         {

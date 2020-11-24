@@ -20,6 +20,8 @@ namespace surf_spotter_dot_net_core.Controllers
 {
     public class HomeController : Controller
     {
+
+        // Dependency injection of proxyclass and EF database
         private readonly ILogger<HomeController> _logger;
         private readonly IdentityDataContext _db;
         private readonly HttpProxy _client;
@@ -31,6 +33,10 @@ namespace surf_spotter_dot_net_core.Controllers
             _client = client;
         }
 
+        //
+        // Return views with routing to each of them
+        // I.E AboutUs returns Abouts.cshtml
+        // 
         [Route("")]
         [Route("Index")]
         [Route("H")]
@@ -56,8 +62,6 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             return View();
         }
-
-       
 
         [Route("Privacy")]
         [Route("home/Privacy")]

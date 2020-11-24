@@ -11,6 +11,8 @@ namespace surf_spotter_dot_net_core.Controllers
 {
     public class SpotController : Controller
     {
+
+        //Dependency injection to use objects
         private readonly ILogger<SpotController> _logger;
         private readonly IdentityDataContext _db;
         private readonly HttpProxy _client;
@@ -22,30 +24,37 @@ namespace surf_spotter_dot_net_core.Controllers
             _client = client;
         }
 
+
+        // Returns view Spots.cshtml
+        // Makes use of API proxy to fetch Weather data and pass the data to the view for later use
+        // uses ViewModel to ensure to Model is usable in the View
         [HttpGet, Route("spots")]
         [HttpGet, Route("s")]
         [HttpGet, Route("")]
         public async Task<ActionResult<SpotsViewModel>> Spots()
         {
+            // Check if the model state is valid, else return the view
             if (!ModelState.IsValid)
             {
                 return View();
             }
             SpotsViewModel spotsViewModel = new SpotsViewModel();
 
+            // Get the data from spot with Id 2 as standard data
             var spot = _client.GetOneSpot(2);
             var spots = await _client.GetAllSpots();
             spotsViewModel.Spots = spots;
-
-            //var hourly = await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng);
-            //spotsViewModel.Hourly = hourly;
-
+            
+            // Make use of the props Lat and Lng to fetch the weather data
             var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng);
+            // Show Daily data
             spotsViewModel.Daily = daily;
 
             return View(spotsViewModel);
         }
 
+        // Posts data from view through viewmodel to lookup data from selectlist
+        // Passed data is SpotViewModel.SpotId
         [HttpPost, Route("spots")]
         [HttpPost, Route("s")]
         [HttpPost, Route("")]
@@ -53,6 +62,7 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             var spots = await _client.GetAllSpots();
             spotsViewModel.Spots = spots;
+            // Iterate to find the according Spot and fetch the data
             foreach (Spot s in spotsViewModel.Spots)
             {
                 if (s.Id == spotsViewModel.SpotId)
@@ -75,6 +85,8 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
+        // Method to create a Spot
+        // Model binding to ensure the correct props get set
         [HttpPost, Route("CreateSpot")]
         [HttpPost, Route("CS")]
         [HttpPost, Route("")]
@@ -88,6 +100,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return View();
         }
 
+        //Get all spots from the API
         [Route("showspots")]
         [HttpGet]
         public async Task<ActionResult> ShowSpots()
@@ -97,6 +110,7 @@ namespace surf_spotter_dot_net_core.Controllers
 
             return View(spots);
         }
+
 
         [Route("editspot")]
         [Route("Home/editspot")]

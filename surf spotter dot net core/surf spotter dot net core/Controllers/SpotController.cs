@@ -51,8 +51,10 @@ namespace surf_spotter_dot_net_core.Controllers
             
             // Make use of the props Lat and Lng to fetch the weather data
             var daily = await _client.GetAllByDaily(spot.Result.Lat, spot.Result.Lng, 1);
-            
+            var hourly = await _client.GetAllByHourly(spot.Result.Lat, spot.Result.Lng, 1);
+
             spotsViewModel.Daily = daily;
+            spotsViewModel.Hourly = hourly;
 
             // Returns viewmodelobject with Daily data set!
             return View(spotsViewModel);
@@ -72,7 +74,11 @@ namespace surf_spotter_dot_net_core.Controllers
                 if (s.Id == spotsViewModel.CurrentSpot.Id)
                 {
                     var daily = await _client.GetAllByDaily(s.Lat, s.Lng, spotsViewModel.SpotFormat);
+                    var hourly = await _client.GetAllByHourly(s.Lat, s.Lng, spotsViewModel.TimeFormat);
+
+                    spotsViewModel.Hourly = hourly;
                     spotsViewModel.Daily = daily;
+
                     break;
                 }
             }

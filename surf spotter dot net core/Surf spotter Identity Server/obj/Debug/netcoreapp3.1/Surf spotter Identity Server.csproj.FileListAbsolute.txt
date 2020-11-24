@@ -67,7 +67,6 @@ D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Serv
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csprojAssemblyReference.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.Manifest.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.xml
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.MvcApplicationPartsAssemblyInfo.cache

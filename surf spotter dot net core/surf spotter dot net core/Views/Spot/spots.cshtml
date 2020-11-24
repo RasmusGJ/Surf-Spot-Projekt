@@ -154,155 +154,144 @@
             <option value="2">Imperial</option>
         </select>
 
+        <select class="timeSelect"
+                asp-for="TimeFormat">
+            <option value="1">Hourly</option>
+            <option value="2">Daily</option>
+        </select>
+
         <input type="submit" value="Go To Spot!" class="submit-btn" />
     </form>
 </div>
 
-@*@<div class="spotSelectDivLatLong">
-
-    <form action="Spots" method="post">
-        @using (Html.BeginForm())
-        {
-            @Html.ValidationSummary()
-            <div class="inputgroup">
-                @Html.LabelFor(x => x.Lat)
-                @Html.EditorFor(x => x.Lat)
-            </div>
-            <div class="inputgroup">
-                @Html.LabelFor(x => x.Lng)
-                @Html.EditorFor(x => x.Lng)
-            </div>
-            <div class="inputgroup">
-                <button type="submit" class="sub">Action</button>
-            </div>
-        }
-    </form>
-</div>*@
-
 <div>
-        
-    @*<table class="dataTable">
-        <thead>
-            <tr>
-                <th>
-                    Time Stamp
-                </th>
-                <th>
-                    Air Temperature
-                </th>
-                <th>
-                    Air Pressure
-                </th>
-                <th>
-                    Feels Like
-                </th>
-                <th>
-                    Wind Speed
-                </th>
+    @if (Model.TimeFormat == 1)
+    {
+        <table class="dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        Time Stamp
+                    </th>
+                    <th>
+                        Air Temperature
+                    </th>
+                    <th>
+                        Air Pressure
+                    </th>
+                    <th>
+                        Feels Like
+                    </th>
+                    <th>
+                        Wind Speed
+                    </th>
 
-            </tr>
-        </thead>
-        <tbody>
+                </tr>
+            </thead>
+            <tbody>
 
 
-            @{
-                int i = 0;
-                int c = 0;
-            }
+                @{
+                    int i = 0;
+                    int c = 0;
+                }
 
-            @foreach (var vmItem in Model.Hourly)
-            {
-                if (c == 0)
+                @foreach (var vmItem in Model.Hourly)
                 {
+                    if (c == 0)
+                    {
+                        <tr>
+                            <td>
+                                @string.Format("+{0}:00", i)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => vmItem.Temp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => vmItem.Pressure)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                            </td>
+                        </tr>
+                        c = 1;
+                    }
+                    else
+                    {
+                        c = 0;
+                    }
+
+                    i++;
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <table class="dataTable">
+            <thead>
+                <tr>
+                    <th>
+                        Day
+                    </th>
+                    <th>
+                        Temperature
+                    </th>
+                    <th>
+                        Feels like
+                    </th>
+                    <th>
+                        Humidity
+                    </th>
+                    <th>
+                        Wind speed
+                    </th>
+                    <th>
+                        Wind Deg
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                @{
+                    int l = 0;
+                }
+
+                @foreach (var vmItem in Model.Daily)
+                {
+
                     <tr>
                         <td>
-                            @string.Format("+{0}:00", i)
+                            @string.Format(DateTime.Today.AddDays(l).ToString("d/M/yy"))
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Temp)
+                            @Html.DisplayFor(modelItem => vmItem.Temp.Day)°
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Pressure)
+                            @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)°
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Feels_Like)
+                            @Html.DisplayFor(modelItem => vmItem.Humidity) %
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed)
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Speed) m/s
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
+                            <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:5px;margin-left:10px;margin-right:10px;" />
                         </td>
                     </tr>
-                    c = 1;
+
+                    l++;
                 }
-                else
-                {
-                    c = 0;
-                }
-
-                i++;
-            }
-        </tbody>
-    </table>*@
-        
-
-    <table class="dataTable">
-        <thead>
-            <tr>
-                <th>
-                    Day
-                </th>
-                <th>
-                    Temperature
-                </th>
-                <th>
-                    Feels like
-                </th>
-                <th>
-                    Humidity
-                </th>
-                <th>
-                    Wind speed
-                </th>
-                <th>
-                    Wind Deg
-                </th>
-
-            </tr>
-        </thead>
-        <tbody>
-
-
-            @{
-                int l = 0;
-            }
-
-            @foreach (var vmItem in Model.Daily)
-             {
-
-                <tr>
-                    <td>
-                        @string.Format(DateTime.Today.AddDays(l).ToString("d/M/yy"))
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Temp.Day)°
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Feels_Like.Day)°
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Humidity) %
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Wind_Speed) m/s
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => vmItem.Wind_Deg)
-                        <img src="~/Assets/Images/arrow.png" id="myimage" style="transform:rotate(@vmItem.Wind_Deg@@deg); margin-top:5px;margin-left:10px;margin-right:10px;"/>
-                    </td>
-                </tr>                       
-                l++;
-             }
-        </tbody>
-    </table>      
+            </tbody>
+        </table>
+    }
 </div>
 
 <div class="container">
@@ -329,7 +318,7 @@
                 @Html.ValidationMessageFor(x => x.CurrentComment.AmountOfPeople)
 
             </div>
-            
+
             <div class="inputgroup">
                 <button type="submit" class="sub">Tilføj kommentar</button>
             </div>

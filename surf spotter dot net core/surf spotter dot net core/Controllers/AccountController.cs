@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    //This lets swagger know that that the actions in this controller, should NOT be displayed!
     [ApiExplorerSettings(IgnoreApi = true)]
     public class AccountController : Controller
     {
@@ -23,6 +24,7 @@ namespace surf_spotter_dot_net_core.Controllers
             _signInManager = signInManager;
         }
 
+        //Loads the login view
         [HttpGet]
         [Route("Login")]
         public ActionResult Login()
@@ -30,7 +32,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return View(new LoginViewModel());
         }
 
-
+        //This post request handles user logins. 
         [HttpPost, Route("Login")]
         public async Task<ActionResult> Login(LoginViewModel login, string returnUrl = null)
         {
@@ -41,18 +43,21 @@ namespace surf_spotter_dot_net_core.Controllers
                 login.UserName, login.Password,
                 login.RememberMe, false
                 );
-
+            //If something goes wrong with passwordsigninAsync
             if (!result.Succeeded)
             {
+                //Error message
                 ModelState.AddModelError("", "Login error!");
                 return View();
             }
+            //Otherwise redirect to home
             if (string.IsNullOrWhiteSpace(returnUrl))
                 return RedirectToAction("Index", "Home");
 
             return Redirect(returnUrl);
         }
 
+        //Post request that handles user logout
         [HttpPost]
         public async Task<IActionResult> Logout(string returnUrl = null)
         {
@@ -64,6 +69,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return Redirect(returnUrl);
         }
 
+        //Get request returning signup page.
         [HttpGet]
         [Route("Signup")]
         public IActionResult SignUp()
@@ -71,6 +77,7 @@ namespace surf_spotter_dot_net_core.Controllers
             return View(new RegisterViewModel());
         }
 
+        //Post request handling user signups and adding them to the identity db
         [HttpPost, Route("Signup")]
         public async Task<IActionResult> SignUp(RegisterViewModel registration)
         {

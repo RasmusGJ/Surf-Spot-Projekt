@@ -29,13 +29,13 @@ namespace surf_spotter_dot_net_core
 
         public IConfiguration Configuration { get; }
 
+        //Dependency injection container
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
 
-
-            //kan godt v�re login ikke virker med disse �ndringer til authentication
+            //kan godt være login ikke virker med disse aendringer til authentication
             //
             // JWT token bearer er indf�rt, Dog er der problemer mellem login systemet bruger authentication
             // og at dette bruger authentication. Koden for neen burde "overskrive" men g�r det ikke
@@ -57,19 +57,13 @@ namespace surf_spotter_dot_net_core
                 {
                     Version = "v1",
                     Title = "Spots API",
-                    Description = "A simple example ASP.NET Core Web API",
-                    TermsOfService = new Uri("https://example.com/terms"),
+                    Description = "Get all the spicy data about our users spots. Spots API ready for use. ",
                     Contact = new OpenApiContact
                     {
-                        Name = "Shayne Boyer",
+                        Name = "Liban Rage",
                         Email = string.Empty,
                         Url = new Uri("https://twitter.com/spboyer"),
                     },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Use under LICX",
-                        Url = new Uri("https://example.com/license"),
-                    }
                 });
             });
 

@@ -37,30 +37,15 @@ C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Surf spotter Identity Server.runtimeconfig.dev.json
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Surf spotter Identity Server.dll
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Surf spotter Identity Server.pdb
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityModel.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityServer4.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csprojAssemblyReference.cache
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.AssemblyInfoInputs.cache
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.AssemblyInfo.cs
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.RazorTargetAssemblyInfo.cache
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csproj.CopyComplete
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.Manifest.cache
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.xml
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.dll
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.pdb
 C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.genruntimeconfig.cache
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csproj.CoreCompileInputs.cache
-C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.MvcApplicationPartsAssemblyInfo.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -82,7 +67,6 @@ D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Serv
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csprojAssemblyReference.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.Manifest.cache
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\staticwebassets\Surf spotter Identity Server.StaticWebAssets.xml
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.MvcApplicationPartsAssemblyInfo.cache
@@ -92,3 +76,18 @@ D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Serv
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csproj.CopyComplete
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.dll
 D:\Github\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.pdb
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityServer4.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csproj.CopyComplete
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.csproj.CoreCompileInputs.cache
+C:\Users\regsa\Documents\GitHub\Surf-Spot-Projekt\surf spotter dot net core\Surf spotter Identity Server\obj\Debug\netcoreapp3.1\Surf spotter Identity Server.MvcApplicationPartsAssemblyInfo.cache

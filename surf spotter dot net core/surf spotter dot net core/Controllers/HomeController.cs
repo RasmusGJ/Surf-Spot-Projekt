@@ -18,6 +18,7 @@ using System.Data.Entity.Infrastructure;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

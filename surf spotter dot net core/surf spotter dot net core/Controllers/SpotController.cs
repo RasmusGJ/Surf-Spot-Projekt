@@ -9,6 +9,7 @@ using surf_spotter_dot_net_core.ViewModels;
 
 namespace surf_spotter_dot_net_core.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class SpotController : Controller
     {
         private readonly ILogger<SpotController> _logger;

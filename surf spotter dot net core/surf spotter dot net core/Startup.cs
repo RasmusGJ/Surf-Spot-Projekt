@@ -29,11 +29,11 @@ namespace surf_spotter_dot_net_core
 
         public IConfiguration Configuration { get; }
 
+        //Dependency injection container
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
 
             //kan godt vaere login ikke virker med disse aendringer til authentication
             //

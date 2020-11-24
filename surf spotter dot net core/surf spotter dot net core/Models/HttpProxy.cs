@@ -32,7 +32,7 @@ namespace surf_spotter_dot_net_core.Models
         }
         
         //Gets all data from openweathermap API for an hourly forecast (48Hours from current)
-        public async Task<List<Hourly>> GetAllByHourly(double lat, double lng)
+        public async Task<List<Hourly>> GetAllByHourly(double lat, double lng, int format)
         {
             Root hourlys = new Root();
             

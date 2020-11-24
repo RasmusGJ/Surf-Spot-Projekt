@@ -60,8 +60,8 @@ namespace surf_spotter_dot_net_core.Controllers
         [HttpGet, Route("home/Kontakt")]
         [HttpGet, Route("K")]
         public IActionResult Kontakt()
-        {
-            return View();
+        {            
+            return View();            
         }
 
         [Route("Privacy")]
@@ -72,5 +72,6 @@ namespace surf_spotter_dot_net_core.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }        
+
     }
 }

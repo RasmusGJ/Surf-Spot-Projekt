@@ -27,6 +27,7 @@ namespace surf_spotter_dot_net_core.ViewModels
 
         // Needed to pass data to controller through view
         // Gets set to the spots Id from Model class which enables api functions
-        public int SpotId { get; set; }
+        
+        public Comment CurrentComment { get; set; } = new Comment();
     }
 }
